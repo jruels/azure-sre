@@ -1,9 +1,5 @@
 # Welcome to the SRE Labs using Azure Cloud Platform
 
-For this lab you will need to use your windows VM provided by TEKsystem.
-
-Navigate [here](Allfiles/Labs/win_vms.md) to check your username and password.
-
 ## Labs Index
 
 Click on a lab to view detailed instructions:
