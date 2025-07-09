@@ -1,0 +1,97 @@
+trigger: none
+
+pool:
+  name: student-lab-pool
+
+variables:
+  - name: projectName
+    value: '<<<YOUR AZURE DEVOPS PROJECT>>>'            # <-- Update this
+  - name: buildPipelineName
+    value: '<<<YOUR BUID PIPELINE>>>'          # <-- Update this
+  - name: artifactName
+    value: 'frontend'        
+  - name: targetFile
+    value: 'app.py'                             # Optional: Which file inside artifact to display
+  - name: resourceGroup
+    value: '<<<YOUR RESSOURCE GROUP>>>'        # <-- Update this
+  - name: webAppName
+    value: '<<<YOUR WEB APP>>>'                # <-- Update this Azure Web App target
+
+steps:
+- script: |
+    echo "Installing Azure DevOps CLI extension..."
+    az extension add --name azure-devops || echo "Already installed."
+
+    echo "Logging into Azure DevOps CLI using PAT..."
+    echo "$(MY_DEVOPS_PAT)" | az devops login
+
+    echo "Setting DevOps defaults..."
+    az devops configure --defaults organization=https://dev.azure.com/opscosolutions project=$(projectName)
+
+    echo "Resolving Pipeline ID for: $(buildPipelineName)..."
+    PIPELINE_ID=$(az pipelines show --name "$(buildPipelineName)" --query id --output tsv)
+
+    if [ -z "$PIPELINE_ID" ]; then
+      echo "Pipeline not found!"
+      exit 1
+    fi
+
+    echo "Looking for the latest successful build with artifacts..."
+
+    for BUILD_ID in $(az pipelines build list \
+      --definition-ids $PIPELINE_ID \
+      --status completed \
+      --result succeeded \
+      --top 10 \
+      --query '[].id' \
+      --output tsv); do
+
+      echo "Checking Build ID: $BUILD_ID"
+
+      ARTIFACT_COUNT=$(az pipelines runs artifact list \
+        --run-id $BUILD_ID \
+        --query 'length(@)' \
+        --output tsv)
+
+      if [ "$ARTIFACT_COUNT" -gt 0 ]; then
+        echo "Found build with artifacts: $BUILD_ID"
+        SELECTED_BUILD_ID=$BUILD_ID
+        break
+      fi
+    done
+
+    if [ -z "$SELECTED_BUILD_ID" ]; then
+      echo "##vso[task.complete result=Failed;]No successful builds with artifacts found in the last 10 builds!"
+      exit 1
+    fi
+
+    echo "Downloading artifact from Build ID: $SELECTED_BUILD_ID..."
+    mkdir -p artifacts
+    az pipelines runs artifact download \
+      --run-id $SELECTED_BUILD_ID \
+      --artifact-name $(artifactName) \
+      --path ./artifacts
+
+    echo "Zipping artifact content for deployment..."
+    cd artifacts
+    zip -r ../deploy.zip .
+    cd ..
+    ls
+  displayName: 'Fetch Last Successful Build That Has Artifacts'
+  env:
+    MY_DEVOPS_PAT: $(MY_DEVOPS_PAT)
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'AzureDevopsConnection'        # <-- Name of your service connection
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      echo "Deploying deploy.zip to Azure Web App: $(webAppName)..."
+      ls
+      az webapp deploy \
+        --resource-group $(resourceGroup) \
+        --name $(webAppName) \
+        --src-path deploy.zip \
+        --type zip
+  displayName: 'Deploy Artifact to Azure Web App'

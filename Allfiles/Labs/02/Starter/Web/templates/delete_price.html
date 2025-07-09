@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Price - Market Data Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Delete Price</h2>
+    <form method="POST">
+        Instrument ID: <input type="text" name="instrument_id" required><br><br>
+        <button type="submit">Delete Price</button>
+    </form>
+    {% if result %}
+        <h3>API Response:</h3>
+        <pre>{{ result | tojson(indent=2) }}</pre>
+    {% endif %}
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

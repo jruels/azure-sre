@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Market Data Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Welcome, {{ session['user'] }}</h2>
+    <ul>
+        <li><a href="{{ url_for('retrieve_price') }}">Retrieve Price</a></li>
+        <li><a href="{{ url_for('report_client_valuation') }}">Report Client Valuation</a></li>
+        <li><a href="{{ url_for('delete_price') }}">Delete Price</a></li>
+    </ul>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Client Valuation - Market Data Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Report Client Valuation</h2>
+    <form method="POST">
+        Client ID: <input type="text" name="client_id" required><br><br>
+        Valuation Data:<br>
+        <textarea name="valuation_data" rows="6" cols="40" required></textarea><br><br>
+        <button type="submit">Report Valuation</button>
+    </form>
+    {% if result %}
+        <h3>API Response:</h3>
+        <pre>{{ result | tojson(indent=2) }}</pre>
+    {% endif %}
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>
