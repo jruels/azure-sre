@@ -2,7 +2,7 @@
 
 ## Lab introduction
 
-In this lab, you create a Storage Account, a Flask Web App, an API and a simple deployment pipeline using github action in Azure.
+In this lab, you create a Storage Account, a Flask Web App, an API, and a simple deployment pipeline using GitHub Actions in Azure.
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
@@ -17,7 +17,7 @@ In this lab, you will explore how to create a web application and blob storage o
 + Task 1: Create a Storage Account and Blob Containers
 + Task 2: Deploy a webapp using Azure Web Server
 + Task 3: Deploy an API using Azure Web Server 
-+ Task 4: Implement GithubAction using Azure Deployment Configuration
++ Task 4: Implement GitHub Action using Azure Deployment Configuration
 
 
 ## Azure Web Application Architecture Diagram
@@ -28,7 +28,7 @@ In this lab, you will explore how to create a web application and blob storage o
 
 ### Before you start
 
-#### Sign in to the lab environment
+#### Sign in to the lab environment.
 
 Sign in to your Windows 11 virtual machine (VM).
 
@@ -81,9 +81,9 @@ Sign in to your Windows 11 virtual machine (VM).
 
    > **Note**: It doesn't matter which **connection string** you choose. They are interchangeable.
    > 
-   > ⚠️ The **Key**s are platform managed encryption keys and are **not used for this lab.**
+   > ⚠️ The **Key**s are platform-managed encryption keys and are **not used for this lab.**
 
-1. Open Notepad, and then paste the copied connection string value to Notepad. You'll use this value later in this lab.
+1. Open Notepad, and then paste the copied connection string value into Notepad. You'll use this value later in this lab.
 
 #### Task 3: Download the repository "sre_azure_labs" to your computer
 
@@ -91,9 +91,9 @@ Sign in to your Windows 11 virtual machine (VM).
    
 1. On your Visual Studio, launch a Git Bash Terminal (From the menur bar: Terminal > New Terminal), then select the **Git Bash** with the **'+'** icon.
 
-3. Clone the github repository
+3. Clone the GitHub repository
 ```
-git clone https://github.com/OPS-CO-Solutions/sre_azure_labs.git
+git clone https://github.com/jruels/azure-sre
 
 ```
 
@@ -170,7 +170,7 @@ git clone https://github.com/OPS-CO-Solutions/sre_azure_labs.git
    python3.13 -m pip install -r requirements.txt && gunicorn --bind=0.0.0.0 --timeout 600 application:app
    ```
 
-   > **Note**: This makes sure the requirements are installed and the application run on startup.
+   > **Note**: This makes sure the requirements are installed and the application runs on startup.
 
 1. Under "Platform settings", select "On" for the option **SCM Basic Auth Publishing Credentials**
 
@@ -442,7 +442,7 @@ In this exercise, you created a web app in Azure, and then deployed your web app
 1. Observe the login page. Enter the following credentials:
    ```
    admin
-   Password123
+   password123
    ```
 
 1. On the webpage, perform the following actions:
@@ -460,42 +460,84 @@ In this exercise, you created a web app in Azure, and then deployed your web app
 1. Close the currently running Visual Studio Code and Terminal applications.
 
 
-#### Task 5: Enable Github Action for automated deployment
+#### Task 5: Enable GitHub Actions for automated deployment
 
 ##### Setup Git Repositories
 
-1. Create two GIT repository using your personnal github account : finfront_yourname, finapi_yourname
-1. Clone the two associated repository on your VM, using gitbash
-   ```
-   cd ~
-   git clone https://github.com/<yourpersonnalgitaccount>/finfront_yourname
-   git clone https://github.com/<yourpersonnalgitaccount>/finapi_yourname
-   
-   ```
-1. Copy the Web and and api starter code in your new repositories
+1. Create two GIT repositories using your personnal GitHub account : finfront_yourname, finapi_yourname
+
+1. Clone the two associated repositories on your VM, using gitbash
+
+   `cd ~`
+
+   `git clone https://github.com/<yourpersonnalgitaccount>/finfront_yourname`
+
+   `git clone https://github.com/<yourpersonnalgitaccount>/finapi_yourname`
+
+1. Copy the Web and and api starter code in your new repositories.
    ```
    cd ~/sre_azure_labs/Allfiles/Labs/02/Starter/API/
-   # the commands below assume the location of your finapi_yourname in your user/home folder 
-   cp -p application.py ~/finapi_yourname 
+   ```
+
+   Note: The command below assume the location of your finapi_yourname in your user/home folder 
+
+   ```
+   cp -p application.py ~/finapi_yourname
    cp -p requirements.txt ~/finapi_yourname
-   
+   ```
+
+   ```
    cd ~/sre_azure_labs/Allfiles/Labs/02/Starter/Web/
    # the commands below assume the location of your finapi_yourname in your user/home folder 
    cp -p app.py ~/finfront_yourname 
    cp -p requirements.txt ~/finfront_yourname
    cp -rp static/ ~/finfront_yourname 
    cp -rp templates/ ~/finfront_yourname 
-   
    ```
-1. Push the code, for the two repository, repeat the action below
+
+   
+
+1. Push the code for finapi_yourname
+
+   
+
    ```
    cd ~/finapi_yourname
+   ```
+
+   ```
    git add --all
+   ```
+
+   ```
    git commit -m "Initial Source code delivery"
+   ```
+
+   ```
    git push
    ```
 
-##### Setup GitHubAction with Azure Deployment
+1. Repeat for the finfront_yourname code
+
+   ```
+   cd ~/finfront_yourname
+   ```
+
+   ```
+   git add --all
+   ```
+
+   ```
+   git commit -m "Initial Source code delivery"
+   ```
+
+   ```
+   git push
+   ```
+
+   
+
+##### Setup GitHub Actions with Azure Deployment
 
 1. On the Azure portal's search for your frontend web app **finweb_yourname** and select it
 
@@ -515,8 +557,10 @@ In this exercise, you created a web app in Azure, and then deployed your web app
 
 1. Hit the Save button at the top
 
-1. Refresh the page , you should see a new deployment in the deployment center
-    > **Note:** In case of failure, check the logs in Github Actions. Navigate to your repo and the select the tab **Actions**
+1. Navigate to GitHub, select your frontend repository and click "Actions".
+
+1. iIn your Azure portal page, on your frotend app, refresh the page , you should see a new deployment in the deployment center
+    > **Note:** In case of failure, check the logs in GitHub Actions. Navigate to your repo and the select the tab **Actions**
     > 
     > Classic error: **'Deployment has been stopped due to SCM container restart.'**.
     > 
@@ -524,7 +568,7 @@ In this exercise, you created a web app in Azure, and then deployed your web app
     
 1. After a few minute, check your frontend and test it
 
-1. Repeat actions 1 through 12 but this time for your Web App API finapi
+1. Repeat actions 1 through 12, but this time for your Web App API finapi
 
 **Any push of new code on your repo will trigger the automatic build and deployment of your applications to the Azure Web Apps !**
 

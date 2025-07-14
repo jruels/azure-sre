@@ -2,7 +2,7 @@
 
 ## Lab introduction
 
-In this lab, you create and compare virtual machines to virtual machine scale sets. You learn how to create, configure and resize a single virtual machine. Finally we will use Azure CLI to build a virtual machine.
+In this lab, you create and compare virtual machines to virtual machine scale sets. You learn how to create, configure, and resize a single virtual machine. Finally, we will use Azure CLI to build a virtual machine.
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
