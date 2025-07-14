@@ -559,7 +559,7 @@ In this exercise, you created a web app in Azure, and then deployed your web app
 
 1. Navigate to GitHub, select your frontend repository and click "Actions".
 
-1. iIn your Azure portal page, on your frotend app, refresh the page , you should see a new deployment in the deployment center
+1. In your Azure portal page, on your frotend app, refresh the page , you should see a new deployment in the deployment center
     > **Note:** In case of failure, check the logs in GitHub Actions. Navigate to your repo and the select the tab **Actions**
     > 
     > Classic error: **'Deployment has been stopped due to SCM container restart.'**.

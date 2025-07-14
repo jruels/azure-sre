@@ -10,7 +10,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario
 
-Your organization has migrated their infrastructure to Azure. It is important that Administrators are notified of any significant infrastructure changes. You plan to examine the capabilities of Azure Monitor, including Log Analytics.
+Your organization has migrated its infrastructure to Azure. Administrators must be notified of any significant infrastructure changes. You plan to examine the capabilities of Azure Monitor, including Log Analytics.
 
 
 ## Architecture diagram
@@ -147,6 +147,8 @@ In this task, if the alert is triggered send an email notification to the operat
     |---------|---------|
     | Alert rule name | `VM was deleted` |
     | Alert rule description | `A VM in your resource group was deleted` |
+    | Resource group | **Training-Student-0xx** |
+    | Region | **Global** (default) |
 
 1. Select **Review + create** to validate your input, then select **Create**.
 
