@@ -61,7 +61,7 @@ Sign in to your Windows 11 virtual machine (VM).
    trigger: none
    
    pool:
-   name: student-lab-pool
+      name: student-lab-pool
    
    steps:
      - task: UsePythonVersion@0
