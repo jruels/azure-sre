@@ -181,10 +181,10 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 ## Task 4 : Setup our Apache webserver
 
-1. Find the public IP of your VM
+1. Find the public IP of your VM, replacing with your assigned resource group.
 
 ```
-az vm show --name myCLIVM --resource-group sre_labs -d --query publicIps -o tsv
+az vm show --name myCLIVM --resource-group [Trianing-Student-0xx] -d --query publicIps -o tsv
 ```
 
 2. SSH into your VM.
