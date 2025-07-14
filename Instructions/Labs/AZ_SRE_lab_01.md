@@ -219,26 +219,29 @@ sudo systemctl enable apache2
 
 ```
 
-7. Allow Inbound Traffic through port 80 from any source
+### Allow Inbound Traffic through port 80 from any source
 
-8. Navigate to your azure portal ressource group
+1. Navigate to your azure portal ressource group
 
-9. Look for **myCLIVMNSG** ( or the name of your VM from step 1 )
+2. Look for **myCLIVMNSG** ( or the name of your VM from step 1 )
 
-10. On the left panel, go to Settings > Inbound Security Rules
+3. On the left panel, go to Settings > Inbound Security Rules
 
-11. Hit the add
+4. Hit the add
 
-12. In the new pop up window, change Destination port ranges to **80**, and validate with Add  
+5. In the new pop up window, change Destination port ranges to **80**, and validate with Add  
 
-13. Check if you can access your apache landing page
+
+Check if you can access your apache landing page
 
 ```
 http://<Your-VM-Public-IP>/index.html
 ```
 
+### Deallocate your VM
 
-14. Use **az vm deallocate** to deallocate your virtual machine. Type **Yes** to confirm.
+
+1. Use **az vm deallocate** to deallocate your virtual machine. Type **Yes** to confirm.
 
     >**Note:** Replace **Training-Student-0xx** with your own ressource group.
     
@@ -246,10 +249,10 @@ http://<Your-VM-Public-IP>/index.html
     az vm deallocate --resource-group Training-Student-0xx --name myCLIVM
     ```
 
-15. Verify the **powerState** is **VM Running**.
+2. Verify the **powerState** is **VM Running**.
 
 
-16. Use **az vm show** to ensure the **powerState** is **VM deallocated**.
+3. Use **az vm show** to ensure the **powerState** is **VM deallocated**.
 
     >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
 
