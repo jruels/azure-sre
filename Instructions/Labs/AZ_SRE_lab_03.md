@@ -41,7 +41,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. Download the **/Allfiles/Labs/02/03-vm-template.json** lab files to your computer.
+1. Download the **/Allfiles/Labs/03/03-vm-template.json** lab files to your computer.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -51,7 +51,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. On the edit template page, select **Load file**.
 
-1. Locate and select the **/Allfiles/Labs/02/03-vm-template.json** file and select **Open**.
+1. Locate and select the **/Allfiles/Labs/03/03-vm-template.json** file and select **Open**.
 
 1. Observe on the left pane the items under the **Resources**, **Variables** and **Parameters** sections.
 
