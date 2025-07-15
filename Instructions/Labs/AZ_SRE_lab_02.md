@@ -85,7 +85,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. Open Notepad, and then paste the copied connection string value into Notepad. You'll use this value later in this lab.
 
-#### Task 3: Download the repository "sre_azure_labs" to your computer
+#### Task 3: Download the repository "zure_sre" to your computer
 
 1. On the taskbar, select the **Visual Studio Code** icon.
    
@@ -118,7 +118,7 @@ git clone https://github.com/jruels/azure-sre
     | Setting | Action |
     |--|--|
     | **Files** section | Select **Browse for files** or use the drag and drop feature |
-    | **File Location** | Browse to where you downloaded the repo in the previous setp: **~/sre_azure_labs/Allfiles/Labs/02/Starter/Reports**, select the **sample_report.csv** file, and then select **Open** |
+    | **File Location** | Browse to where you downloaded the repo in the previous setp: **~/azure-sre/Allfiles/Labs/02/Starter/Reports**, select the **sample_report.csv** file, and then select **Open** |
     | **Overwrite if files already exist** check box | Ensure that the check box is selected, and then select **Upload** |
 
     > **Note**: Wait for the blob to upload before you continue with this lab.
@@ -198,7 +198,7 @@ git clone https://github.com/jruels/azure-sre
 
 1. On your Visual Studio, On the **File menu**, select **Open Folder**.
 
-1. In the **File Explorer** window, browse to **~/sre_azure_labs/Allfiles/Labs/02/Starter/API**, and then select **Select Folder**.
+1. In the **File Explorer** window, browse to **~/azure-sre/Allfiles/Labs/02/Starter/API**, and then select **Select Folder**.
 
    > **Note**: Ignore any prompts to add required assets to build and debug and to run the restore command to address unresolved dependencies.
 
@@ -240,10 +240,10 @@ git clone https://github.com/jruels/azure-sre
    az webapp list --resource-group Training-Student-0xx --query "[?starts_with(name, 'finapi')].{Name:name}" --output tsv
    ```
 
-1. Enter the following command, and then select Enter to change the current directory to the **~/sre_azure_labs/Allfiles/Labs/02/Starter/API** directory that contains the lab files:
+1. Enter the following command, and then select Enter to change the current directory to the **~/sre-azure_labs/Allfiles/Labs/02/Starter/API** directory that contains the lab files:
 
    ```
-   cd ~/sre_azure_labs/Allfiles/Labs/02/Starter/API
+   cd ~/azure-sre/Allfiles/Labs/02/Starter/API
    ```
    > **Note:** Skip if you are already in this location.
 
@@ -371,7 +371,7 @@ In this exercise, you created a web app in Azure, and then deployed your web app
 
 1. On the **File** menu, select **Open Folder**.
 
-1. In the **File Explorer** window, browse to **Allfiles ~/sre_azure_labs/Allfiles/Labs/02/Starter/Web**, and then select **Select Folder**.
+1. In the **File Explorer** window, browse to **Allfiles ~/azure-sre/Allfiles/Labs/02/Starter/Web**, and then select **Select Folder**.
 
    > **Note**: Ignore any prompts to add required assets to build and debug and to run the restore command to address unresolved dependencies.
 
@@ -406,10 +406,10 @@ In this exercise, you created a web app in Azure, and then deployed your web app
    az webapp list --resource-group Training-Student-0xx --query "[?starts_with(name, 'finweb')].{Name:name}" --output tsv
    ```
 
-1. Enter the following command, and then select Enter to change the current directory to the **Allfiles ~/sre_azure_labs/Allfiles/Labs/02/Starter/Web** directory that contains the lab files:
+1. Enter the following command, and then select Enter to change the current directory to the **Allfiles ~/azure-sre/Allfiles/Labs/02/Starter/Web** directory that contains the lab files:
 
    ```
-   cd ~/sre_azure_labs/Allfiles/Labs/02/Starter/Web
+   cd ~/azure-sre/Allfiles/Labs/02/Starter/Web
    ```
    > **Notes:** Skip if you are already in this location.
 
@@ -476,7 +476,7 @@ In this exercise, you created a web app in Azure, and then deployed your web app
 
 1. Copy the Web and and api starter code in your new repositories.
    ```
-   cd ~/sre_azure_labs/Allfiles/Labs/02/Starter/API/
+   cd ~/azure_-sre/Allfiles/Labs/02/Starter/API/
    ```
 
    Note: The command below assume the location of your finapi_yourname in your user/home folder 
@@ -487,7 +487,7 @@ In this exercise, you created a web app in Azure, and then deployed your web app
    ```
 
    ```
-   cd ~/sre_azure_labs/Allfiles/Labs/02/Starter/Web/
+   cd ~/azure-sre/Allfiles/Labs/02/Starter/Web/
    # the commands below assume the location of your finapi_yourname in your user/home folder 
    cp -p app.py ~/finfront_yourname 
    cp -p requirements.txt ~/finfront_yourname

@@ -252,7 +252,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. Rename your pipeline file from "azure-pipelines.yml" to **finapi_yourname_deploy.yml**
    
-   ![image](https://github.com/user-attachments/assets/35a4066a-92d3-410b-a96a-011cc4099620)
+   ![image](media/step2.png)
    
 1. Here copy the code from the lab repository : /AllFiles/Labs/04/API/Pipeline/api_deploy.yml
    
