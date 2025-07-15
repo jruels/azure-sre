@@ -150,7 +150,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
    > **Note:** If a connection window "Setupe you Azure Pipelines project" opens, click on top on **Switch directory** and select "OPSCO Solutions"
    > 
-   > ![image](https://github.com/user-attachments/assets/bbd78a2d-1e73-405b-95d7-d7d9f626893d)
+   > ![image](media/step1.png)
 
 1. In the Configure Your Pipeline step choose Starter Pipeline
 
