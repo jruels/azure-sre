@@ -156,7 +156,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. Rename your pipeline file from "azure-pipelines.yml" to **finweb_yourname_build**
    
-   ![image](https://github.com/user-attachments/assets/35a4066a-92d3-410b-a96a-011cc4099620)
+   ![image](media/step2.png)
 
 1. Here copy the code from the labs repository : /Allfiles/Labs/04/Pipelines/Web/frontend_build.yml
    
@@ -170,7 +170,7 @@ Sign in to your Windows 11 virtual machine (VM).
    
 1. Navigate to Pipelines, select the 3 dots options on the right side of the line of the pipeline. Select Rename, and input **finweb_yourname_build**
    
-   ![image](https://github.com/user-attachments/assets/87007a34-1083-4444-b3d7-1383424e83ad)
+   ![image](media/step3.png)
 
 
 #### Frontend Package Deploy
@@ -186,7 +186,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. In the Configure Your Pipeline step choose Starter Pipeline
 
 1. Rename your pipeline file from "azure-pipelines.yml" to **finweb_yourname_deploy.yml**
-   ![image](https://github.com/user-attachments/assets/35a4066a-92d3-410b-a96a-011cc4099620)
+   ![image](media/step2.png)
    
 1. Here copy the code from the lab repository : /AllFiles/Labs/04/Web/Pipeline/frontend_deploy.yml
    
@@ -224,7 +224,7 @@ Sign in to your Windows 11 virtual machine (VM).
    
 1. Rename your pipeline file from "azure-pipelines.yml" to **finapi_yourname_build**
    
-   ![image](https://github.com/user-attachments/assets/35a4066a-92d3-410b-a96a-011cc4099620)
+   ![image](media/step2.png)
    
 1. Here copy the code from the lab repository : Allfiles/Labs/04/Pipelines/Web/api_build.yml
    
