@@ -2,9 +2,9 @@
 
 ## Lab introduction
 
-In this lab, you will perform changes on the Web Frontend and the API. You will be using Deployments through Github Action, and then switch your CI/CD pipeline to Azure Devops platform.
+In this lab, you will perform changes on the Web Frontend and the API. You will be using Deployments through GitHub Actions, and then switch your CI/CD pipeline to the Azure DevOps platform.
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using the East US region.
 
 ## Estimated timing: 50 minutes
 
@@ -37,11 +37,13 @@ Sign in to your Windows 11 virtual machine (VM).
 
 ### Frontend 
 
-1. Connect to your windows VM
+1. Connect to your Windows VM
 1. Navigate to your local git frontend repository
-1. edit the file app.py
+1. Edit the file app.py
     > **Note**: If you edit using vi, make sure to use `set number` command to view the file line numbers
-1. Go to line 80, then copy the code provided below
+1. Go to line 80, then insert the code provided below.
+1. Save the file
+
     ```
     
     @app.route('/slow-endpoint')
@@ -65,8 +67,8 @@ Sign in to your Windows 11 virtual machine (VM).
     git push
     
     ```
-1. Open a browser and browse for your github repository
-1. click the Actions page, you should see a deployment being triggered
+1. Open a browser and browse to your GitHub repository
+1. Click the Actions page, and you should see a deployment being triggered
 
 ### API 
 
@@ -101,12 +103,20 @@ Sign in to your Windows 11 virtual machine (VM).
 
 ### Remove the previous configuration 
 
-1. Navigate to your finweb app through the azure portal
+1. Navigate to your finweb app through the Azure portal
 
 1. Go to Settings > Configuration, and remove the startup command
-    > **Note**: Deploying with Azure Devops will enable a better startup component
+    > **Note**: Deploying with Azure DevOps will enable a better startup component
 
-1. Go to Deployment Center, and click Disconnect. Accept the message when prompted
+1. Go to the Deployment Center, and click Disconnect. Accept the message when prompted
+
+1. Execute the following command, replacing with your student number
+
+    ```
+    curl -i "https://finweb-student099.azurewebsites.net/"
+    ```
+
+    
 
 1. Repeat these steps for your finapi
 
@@ -142,21 +152,20 @@ Sign in to your Windows 11 virtual machine (VM).
    > 
    > ![image](https://github.com/user-attachments/assets/bbd78a2d-1e73-405b-95d7-d7d9f626893d)
 
-    
 1. In the Configure Your Pipeline step choose Starter Pipeline
 
-1. Rename your pipeline file from "azure-pipelines.yml" to **finweb_yourname_build.yml**
+1. Rename your pipeline file from "azure-pipelines.yml" to **finweb_yourname_build**
    
    ![image](https://github.com/user-attachments/assets/35a4066a-92d3-410b-a96a-011cc4099620)
 
-1. Here copy the code from the sre labs repository : /Allfiles/Labs/04/Pipelines/Web/frontend_build.yml
-    
+1. Here copy the code from the labs repository : /Allfiles/Labs/04/Pipelines/Web/frontend_build.yml
+   
 1. Save and run, then Create
-    
+   
 1. Click on the job to access the logs
-    
+   
 1. You can see the different steps and their results. click on Job and look at the logs. click the "1 artifact" link.
-    
+   
 1. Check that the artifact contain all our expected files
    
 1. Navigate to Pipelines, select the 3 dots options on the right side of the line of the pipeline. Select Rename, and input **finweb_yourname_build**
@@ -180,19 +189,19 @@ Sign in to your Windows 11 virtual machine (VM).
    ![image](https://github.com/user-attachments/assets/35a4066a-92d3-410b-a96a-011cc4099620)
    
 1. Here copy the code from the lab repository : /AllFiles/Labs/04/Web/Pipeline/frontend_deploy.yml
-    
+   
 1. Replace the place holders in the file:
    - <<< YOUR AZURE DEVOPS PROJECT >>> should be configured like **Training-Student-0xx**
    - <<< YOUR BUID PIPELINE >>> should be configured like **finweb_yourname_build.yml**
    - <<< YOUR RESSOURCE GROUP >>> should be configured like **Training-Student-0xx**
    - <<< YOUR WEB APP >>> should be configured like **finweb-yourname**
-    
+   
 1. Click on Variables, add a new one
-    
+   
 1. Name it MY_DEVOPS_PAT and copy the token you saved earlier in the value, then **OK** and **Save**
-    
+   
 1. Save and run, then Create
-    
+   
 1. Click on the job to access the logs
 
 1. Navigate to Pipelines, select the 3 dots options on the right side of the line of the pipeline. Select Rename, and input **finweb_yourname_deploy**
@@ -210,15 +219,15 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Here you will need to authorize Azure Devops by login to your github account
    
 1. When done, Select your api repository
-    
+   
 1. In the Configure Your Pipeline step choose Starter Pipeline
-    
-1. Rename your pipeline file from "azure-pipelines.yml" to **finapi_yourname_build.yml**
+   
+1. Rename your pipeline file from "azure-pipelines.yml" to **finapi_yourname_build**
    
    ![image](https://github.com/user-attachments/assets/35a4066a-92d3-410b-a96a-011cc4099620)
-    
+   
 1. Here copy the code from the lab repository : Allfiles/Labs/04/Pipelines/Web/api_build.yml
-    
+   
 1. Save and run, then Create
 
 1. Navigate to Pipelines, select the 3 dots options on the right side of the line of the pipeline. Select Rename, and input **finapi_yourname_build**
@@ -244,19 +253,19 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Rename your pipeline file from "azure-pipelines.yml" to **finapi_yourname_deploy.yml**
    
    ![image](https://github.com/user-attachments/assets/35a4066a-92d3-410b-a96a-011cc4099620)
-    
+   
 1. Here copy the code from the lab repository : /AllFiles/Labs/04/API/Pipeline/api_deploy.yml
-    
+   
 1. Replace the place holders in the file:
    - <<< YOUR AZURE DEVOPS PROJECT >>> should be configured like **Training-Student-0xx**
    - <<< YOUR BUID PIPELINE >>> should be configured like **finapi_yourname_build.yml**
    - <<< YOUR RESSOURCE GROUP >>> should be configured like **Training-Student-0xx**
    - <<< YOUR API APP >>> should be configured like **finapi-yourname**
-    
+   
 1. Click on Variables, add a new one
-    
+   
 1. Name it MY_DEVOPS_PAT and copy your token in the value
-    
+   
 1. Save and run, then Create
 
 1. Navigate to Pipelines, select the 3 dots options on the right side of the line of the pipeline. Select Rename, and input **finapi_yourname_deploy**
@@ -264,7 +273,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Click on the job to access the logs
 
 1. After 5 minutes check that the deployment was done successfully and the api is properly working.
- 
+
 
 ---
 
@@ -277,5 +286,4 @@ Congratulations on completing the lab. Here are the key takeaways from this lab.
 + Deploying new endpoints through version control triggers traceable, testable deployments.
 + Artifact packaging separates build and deploy concerns, improving pipeline clarity.
 + Using PAT tokens securely connects your Azure DevOps pipelines to deployment targets.
-
 
