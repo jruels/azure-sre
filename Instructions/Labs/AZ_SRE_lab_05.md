@@ -130,15 +130,15 @@ Sign in to your Windows 11 virtual machine (VM).
    requests
    | where timestamp > ago(30m)
    | project name, url, resultCode, duration, success
-
+   
    ```
    > **Note**: This should return the requests made on finapi. Navigate to your finweb **Application Insights** if you are looking for the requests made to finweb.
 
 
 ## Task 2: Deploy two new endpoints using azure devops pipeline
 
-1. In your Visual Studio, go to gitbash, and search your finapi repository ( make sure to pull if you made some changes on remote repository )
-1. Add the code below any @app.route section
+1. In Visual Studio, go to GitBash, and move to your finapi local git repository (finapi_yourname)
+1. Add the code below to any @app.route section in `application.py`
 
    ```
    @app.route('/high-cpu')
@@ -180,7 +180,7 @@ Sign in to your Windows 11 virtual machine (VM).
    curl https://<your-api-app>.azurewebsites.net/high-memory &
    ```
 1. The first command should throw an error due to high CPU usage , the second one should return the memory allowed for each call
-    
+   
 1. If the command were not successfull, you can investigate the logs in Azure on your Web App **finapi-yourname**
    > **Note:** Select **Log Stream** to read the error message in the logs 
 

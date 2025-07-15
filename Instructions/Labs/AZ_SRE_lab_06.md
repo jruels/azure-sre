@@ -98,7 +98,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Modify the timeout of the test **slow-endpoint** test, from 5 seconds to 10 seconds
    ```
    def test_slow_endpoint():
-       r = requests.get(f"{BASE_URL}/api/slow-endpoint", timeout=**10**)
+       r = requests.get(f"{BASE_URL}/api/slow-endpoint", timeout=10)
        assert r.status_code == 200
    ```
 
@@ -127,7 +127,7 @@ Sign in to your Windows 11 virtual machine (VM).
    resources:
      pipelines:
        - pipeline: buildPipeline
-         source: OPS-CO-Solutions.finapi_yourname_deploy
+         source: finapi_yourname_deploy
          trigger:
            branches:
              include:
@@ -293,7 +293,7 @@ Sign in to your Windows 11 virtual machine (VM).
          echo "##vso[task.setvariable variable=PIPELINE_START_TIME]$(date +%s.%3N)"
          echo "##vso[task.setvariable variable=PIPELINE_START_TIME_UTC]$(date -u +%Y-%m-%dT%H:%M:%SZ)"
      displayName: "Capture pipeline start time"
-
+   
    ```
 
 1. At the end of the file, add the following:
