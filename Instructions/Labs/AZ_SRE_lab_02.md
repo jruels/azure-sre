@@ -476,7 +476,7 @@ In this exercise, you created a web app in Azure, and then deployed your web app
 
 1. Copy the Web and and api starter code in your new repositories.
    ```
-   cd ~/azure_-sre/Allfiles/Labs/02/Starter/API/
+   cd ~/azure-sre/Allfiles/Labs/02/Starter/API/
    ```
 
    Note: The command below assume the location of your finapi_yourname in your user/home folder 
