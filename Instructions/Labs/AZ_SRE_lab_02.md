@@ -81,7 +81,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
    > **Note**: It doesn't matter which **connection string** you choose. They are interchangeable.
    > 
-   > ⚠️ The **Key**s are platform-managed encryption keys and are **not used for this lab.**
+   > ⚠️ The **Keys** are platform-managed encryption keys and are **not used for this lab.**
 
 1. Open Notepad, and then paste the copied connection string value into Notepad. You'll use this value later in this lab.
 
@@ -118,7 +118,7 @@ git clone https://github.com/jruels/azure-sre
     | Setting | Action |
     |--|--|
     | **Files** section | Select **Browse for files** or use the drag and drop feature |
-    | **File Location** | Browse to where you downloaded the repo in the previous setp: **~/azure-sre/Allfiles/Labs/02/Starter/Reports**, select the **sample_report.csv** file, and then select **Open** |
+    | **File Location** | Browse to where you downloaded the repo in the previous step: **~/azure-sre/Allfiles/Labs/02/Starter/Reports**, select the **sample_report.csv** file, and then select **Open** |
     | **Overwrite if files already exist** check box | Ensure that the check box is selected, and then select **Upload** |
 
     > **Note**: Wait for the blob to upload before you continue with this lab.
@@ -240,7 +240,7 @@ git clone https://github.com/jruels/azure-sre
    az webapp list --resource-group Training-Student-0xx --query "[?starts_with(name, 'finapi')].{Name:name}" --output tsv
    ```
 
-1. Enter the following command, and then select Enter to change the current directory to the **~/sre-azure_labs/Allfiles/Labs/02/Starter/API** directory that contains the lab files:
+1. Enter the following command, and then select Enter to change the current directory to the **~/azure-sre/Allfiles/Labs/02/Starter/API** directory that contains the lab files:
 
    ```
    cd ~/azure-sre/Allfiles/Labs/02/Starter/API

@@ -15,7 +15,7 @@ In this lab, you will explore release process & engineering
 ## Job skills
 
 + Task 1: Deploying with GitHub Action
-+ Task 2: Deploying with Azure Devops
++ Task 2: Deploying with Azure DevOps
 
 ## Azure Web Application Architecture Diagram
 
@@ -148,7 +148,7 @@ Sign in to your Windows 11 virtual machine (VM).
    
 1. When done, Select your frontend repository
 
-   > **Note:** If a connection window "Setupe you Azure Pipelines project" opens, click on top on **Switch directory** and select "OPSCO Solutions"
+   > **Note:** If a connection window "Setup you Azure Pipelines project" opens, click on top on **Switch directory** and select "OPSCO Solutions"
    > 
    > ![image](media/step1.png)
 
@@ -188,13 +188,13 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Rename your pipeline file from "azure-pipelines.yml" to **finweb_yourname_deploy.yml**
    ![image](media/step2.png)
    
-1. Here copy the code from the lab repository : /AllFiles/Labs/04/Web/Pipeline/frontend_deploy.yml
-   
-1. Replace the place holders in the file:
-   - <<< YOUR AZURE DEVOPS PROJECT >>> should be configured like **Training-Student-0xx**
-   - <<< YOUR BUID PIPELINE >>> should be configured like **finweb_yourname_build**
-   - <<< YOUR RESSOURCE GROUP >>> should be configured like **Training-Student-0xx**
-   - <<< YOUR WEB APP >>> should be configured like **finweb-yourname**
+1. Here copy the code from the lab repository : /AllFiles/Labs/04/Pipelines/Web/frontend_deploy.yml
+
+1. Replace the placeholders in the file:
+   - <YOUR AZURE DEVOPS PROJECT> should be configured like **Training-Student-0xx**
+   - <YOUR BUILD PIPELINE> should be configured like **finweb_yourname_build**
+   - <YOUR RESOURCE GROUP> should be configured like **Training-Student-0xx**
+   - <YOUR WEB APP> should be configured like **finweb-yourname**
    
 1. Click on Variables, add a new one
    
@@ -258,7 +258,7 @@ Sign in to your Windows 11 virtual machine (VM).
    
 1. Replace the place holders in the file:
    - <<< YOUR AZURE DEVOPS PROJECT >>> should be configured like **Training-Student-0xx**
-   - <<< YOUR BUID PIPELINE >>> should be configured like **finapi_yourname_build**
+   - <<< YOUR BUILD PIPELINE >>> should be configured like **finapi_yourname_build**
    - <<< YOUR RESSOURCE GROUP >>> should be configured like **Training-Student-0xx**
    - <<< YOUR API APP >>> should be configured like **finapi-yourname**
    
