@@ -54,7 +54,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Select your api repository 
 1. In the Configure Your Pipeline step choose Starter Pipeline
 1. Rename your pipeline from "azure-pipelines.yml" to **finapi_yourname_smoke_tests.yml**
-   ![rename_pipeline](https://github.com/user-attachments/assets/33796f56-9a27-4876-bbdd-9d3784882adc)
+   ![rename_pipeline](media/rename_pipeline_yaml.png)
    
 1. Here copy the following code :
    ```
@@ -112,7 +112,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Navigate to **https://dev.azure.com/opscosolutions** and select your project Training-Student-xxx
 1. Navigate to Pipelines > **finapi_yourname_smoke_test** then select **Run pipeline**.
 1. Click on the job to access the logs, observe the logs of the task **Run full smoke test suite**
-    ![image](https://github.com/user-attachments/assets/cdf3480b-d84a-4373-9f18-b1c799a4c4ac)
+    ![image](media/smoke_test_result.png)
    > **Note**: All the tests should be passing now.
 
 
@@ -155,7 +155,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. For each variable line, click on the lock icon "Change variable type to secret". Then **Save**
 
-![log_analystics_secrets](https://github.com/user-attachments/assets/33e7b7c2-2531-4389-a4de-cbbcbd88a57e)
+![log_analystics_secrets](media/log_analytic_secret.png)
 
 
 ### Link the Variable Group in your API smoke test pipeline
@@ -198,7 +198,7 @@ Sign in to your Windows 11 virtual machine (VM).
    > Wait for the run of the smoke tests pipeline (after build and deploy), and check the logs
 
 1. You should see the message "This pipeline needs permission to access a resource before this run can continue". Click View, then **Permit**
-   ![image](https://github.com/user-attachments/assets/8bff7d27-90ed-4b87-a9ba-963cc6c74d75)
+   ![image](media/permit_pipeline.png)
 
 
 ## Task 3: Setup metrics visualizations and alerts
@@ -359,7 +359,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Select **Logs**, then **Tables**, and expand **Custom Logs**.
 1. You should now see **PipelineRunSummary_CL** in addtion of **SmokeTestResults_CL**
    
-   ![image](https://github.com/user-attachments/assets/fcb232ef-fa89-42de-ad22-9d36b3d990b5)
+   ![image](media/custom_logs_tables.png)
 1. Explore the latest pipeline runs data, run the following:
    ```
    // Average duration per pipeline
