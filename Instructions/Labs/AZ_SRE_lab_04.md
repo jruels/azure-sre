@@ -226,7 +226,7 @@ Sign in to your Windows 11 virtual machine (VM).
    
    ![image](media/step2.png)
    
-1. Here copy the code from the lab repository : Allfiles/Labs/04/Pipelines/Web/api_build.yml
+1. Here copy the code from the lab repository : `/Allfiles/Labs/04/Pipelines/API/api_build.yml `
    
 1. Save and run, then Create
 
