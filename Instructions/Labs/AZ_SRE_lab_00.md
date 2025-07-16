@@ -1,4 +1,3 @@
-
 # Activity: Creating and Managing a Repository on GitHub
 
 ## Objectives
@@ -64,7 +63,7 @@
 
      ## Cloning a Repository
 
-     git clone https://github.com/username/repository.git
+     git clone https://github.com/your-username/repository.git
 
 
      ## Staging and Committing Changes

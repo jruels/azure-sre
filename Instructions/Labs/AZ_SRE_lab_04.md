@@ -192,7 +192,7 @@ Sign in to your Windows 11 virtual machine (VM).
    
 1. Replace the place holders in the file:
    - <<< YOUR AZURE DEVOPS PROJECT >>> should be configured like **Training-Student-0xx**
-   - <<< YOUR BUID PIPELINE >>> should be configured like **finweb_yourname_build.yml**
+   - <<< YOUR BUID PIPELINE >>> should be configured like **finweb_yourname_build**
    - <<< YOUR RESSOURCE GROUP >>> should be configured like **Training-Student-0xx**
    - <<< YOUR WEB APP >>> should be configured like **finweb-yourname**
    
@@ -258,7 +258,7 @@ Sign in to your Windows 11 virtual machine (VM).
    
 1. Replace the place holders in the file:
    - <<< YOUR AZURE DEVOPS PROJECT >>> should be configured like **Training-Student-0xx**
-   - <<< YOUR BUID PIPELINE >>> should be configured like **finapi_yourname_build.yml**
+   - <<< YOUR BUID PIPELINE >>> should be configured like **finapi_yourname_build**
    - <<< YOUR RESSOURCE GROUP >>> should be configured like **Training-Student-0xx**
    - <<< YOUR API APP >>> should be configured like **finapi-yourname**
    

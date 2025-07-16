@@ -163,7 +163,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [az vm create](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create) command reference for all the parameters associated with creating a virtual machine.
 
-    >**Note:** Replace **Training-Student-0xx** with your own ressource group.
+    >**Note:** Replace **Training-Student-0xx** with your own resource group.
 
     ```sh
     az vm create --name myCLIVM --resource-group Training-Student-0xx --image Ubuntu2204 --admin-username localadmin --generate-ssh-keys --size Standard_B1s
@@ -171,7 +171,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Once the command completes, use **az vm show** to verify your machine was created.
 
-    >**Note:** Replace **Training-Student-0xx** with your own ressource group.
+    >**Note:** Replace **Training-Student-0xx** with your own resource group.
     
     ```sh
     az vm show --name  myCLIVM --resource-group Training-Student-0xx --show-details
@@ -184,7 +184,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 1. Find the public IP of your VM, replacing with your assigned resource group.
 
 ```
-az vm show --name myCLIVM --resource-group [Training-Student-0xx] -d --query publicIps -o tsv
+az vm show --name myCLIVM --resource-group <Training-Student-0xx> -d --query publicIps -o tsv
 ```
 
 2. SSH into your VM.
@@ -221,7 +221,7 @@ sudo systemctl enable apache2
 
 ### Allow Inbound Traffic through port 80 from any source
 
-1. Navigate to your azure portal ressource group
+1. Navigate to your azure portal resource group
 
 2. Look for **myCLIVMNSG** ( or the name of your VM from step 1 )
 
@@ -243,7 +243,7 @@ http://<Your-VM-Public-IP>/index.html
 
 1. Use **az vm deallocate** to deallocate your virtual machine. Type **Yes** to confirm.
 
-    >**Note:** Replace **Training-Student-0xx** with your own ressource group.
+    >**Note:** Replace **Training-Student-0xx** with your own resource group.
     
     ```sh
     az vm deallocate --resource-group Training-Student-0xx --name myCLIVM
@@ -259,9 +259,9 @@ http://<Your-VM-Public-IP>/index.html
 
 ## Cleanup your resources
 
-1. When you are done with the lab, delete the ressource group you created, we will use a different one for our future labs !
-2. Go to Azure Portal, Navigate to your Ressource Group
-3. Hit the Delete Ressource Group button with the bin. It will ask for your confirmation, type the ressource group name and hit delete.
+1. When you are done with the lab, delete the resource group you created, we will use a different one for our future labs !
+2. Go to Azure Portal, Navigate to your Resource Group
+3. Hit the Delete Resource Group button with the bin. It will ask for your confirmation, type the resource group name and hit delete.
 
 
 ## Learn more with self-paced training
