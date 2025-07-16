@@ -85,7 +85,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. Open Notepad, and then paste the copied connection string value into Notepad. You'll use this value later in this lab.
 
-#### Task 3: Download the repository "zure_sre" to your computer
+#### Task 3: Download the repository "azure_sre" to your computer
 
 1. On the taskbar, select the **Visual Studio Code** icon.
    
