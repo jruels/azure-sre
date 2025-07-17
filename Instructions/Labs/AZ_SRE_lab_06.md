@@ -57,29 +57,24 @@ Sign in to your Windows 11 virtual machine (VM).
    ![rename_pipeline](media/rename_pipeline_yaml.png)
    
 1. Here copy the following code :
-   ```
+   ```yaml
    trigger: none
    
    pool:
-      name: student-lab-pool
+     name: student-lab-pool
    
    steps:
-     - task: UsePythonVersion@0
-       inputs:
-         versionSpec: '3.10'
-       displayName: "Use Python 3.10"
-   
      - script: |
-         python -m pip install --upgrade pip
-         pip install pytest requests
+         /azagent/venv/bin/pip3 install pytest requests
        displayName: "Install dependencies"
    
      - script: |
-         pytest -s tests/smoke_tests.py --junitxml=smoke-results.xml
+         /azagent/venv/bin/python3 -m pytest -s tests/smoke_tests.py --junitxml=smoke-results.xml
        displayName: "Run full smoke test suite"
    
+   
      - task: PublishTestResults@2
-       condition: always()   
+       condition: always()
        inputs:
          testResultsFiles: 'smoke-results.xml'
          testRunTitle: 'Post-deployment Smoke Test'
