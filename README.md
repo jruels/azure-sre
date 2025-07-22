@@ -4,7 +4,7 @@
 
 Click on a lab to view detailed instructions:
 
-[Account information])(VMs.md)
+[Account information](VMs.md)
 
 - [Lab 00: Become familiar with GitHub](Instructions/Labs/AZ_SRE_lab_00.md)  
 - [Lab 01: Azure cloud Manage Virtual Machines](Instructions/Labs/AZ_SRE_lab_01.md)  
