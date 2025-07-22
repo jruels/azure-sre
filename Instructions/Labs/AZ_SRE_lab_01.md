@@ -166,7 +166,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
     >**Note:** Replace **** with your own resource group.
 
     ```sh
-    az vm create --name myCLIVM --resource-group  --image Ubuntu2204 --admin-username localadmin --generate-ssh-keys --size Standard_B1s
+    az vm create --name myCLIVM --resource-group ****  --image Ubuntu2204 --admin-username localadmin --generate-ssh-keys --size Standard_B1s
     ```
 
 1. Once the command completes, use **az vm show** to verify your machine was created.
