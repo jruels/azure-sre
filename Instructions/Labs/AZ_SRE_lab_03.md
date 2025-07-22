@@ -62,7 +62,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
-    | Resource group| `Training-Student-0xx` |
+    | Resource group| `Training-Student-0xx-Lab03` |
     | Region        | **East US**   |
     | Username      | `localadmin`   |
     | Password      | Provide a complex password |
@@ -122,7 +122,7 @@ In this task, if the alert is triggered send an email notification to the operat
     |---------|---------|
     | **Project details** |
     | Subscription | your subscription |
-    | Resource group | **Training-Student-0xx** |
+    | Resource group | **Training-Student-0xx-Lab03** |
     | Region | **Global** (default) |
     | **Instance details** |
     | Action group name | `Alert the operations team` (must be unique in the resource group) |
@@ -147,7 +147,7 @@ In this task, if the alert is triggered send an email notification to the operat
     |---------|---------|
     | Alert rule name | `VM was deleted` |
     | Alert rule description | `A VM in your resource group was deleted` |
-    | Resource group | **Training-Student-0xx** |
+    | Resource group | **Training-Student-0xx-Lab03** |
     | Region | **Global** (default) |
 
 1. Select **Review + create** to validate your input, then select **Create**.
@@ -208,7 +208,7 @@ Enter these settings for the scheduling of the alert processing rule:
 
     | Setting | Value |
     |---------|---------|
-    | Resource group | **Training-Student-0xx** |
+    | Resource group | **Training-Student-0xx-Lab03** |
     | Rule name | `Planned Maintenance` |
     | Description | `Suppress notifications during planned maintenance.` |
 
