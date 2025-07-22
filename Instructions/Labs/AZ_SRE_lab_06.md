@@ -115,7 +115,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. Navigate to **https://dev.azure.com/opscosolutions** and select your project Training-Student-xxx
 1. Navigate to Pipelines > **finapi_yourname_smoke_test** then **Edit**
-1. Replace line 1 "trigger: none" by the following:
+1. Replace line 1 "trigger: none" by the following, and replace "yourname":
    ```
    trigger: none
    
@@ -164,11 +164,11 @@ Sign in to your Windows 11 virtual machine (VM).
    
    ```
 
-1. Replace the line that contains "pytest -s tests/smoke_tests.py --junitxml=smoke-results.xml" by the following:
+1. Replace the line that contains "/azagent/venv/bin/python3 -m pytest -s tests/smoke_tests.py --junitxml=smoke-results.xml" by the following:
    ```
    export LOG_ANALYTICS_WORKSPACE_ID=$(LOG_ANALYTICS_WORKSPACE_ID
    export LOG_ANALYTICS_SHARED_KEY=$(LOG_ANALYTICS_SHARED_KEY)
-   pytest -s tests/smoke_tests_centralized.py --junitxml=smoke-results.xml
+   /azagent/venv/bin/python3 -m pytest -s tests/smokesmoke_tests_centralized_tests.py --junitxml=smoke-results.xml
    ```
    
 1. Save
@@ -307,7 +307,7 @@ Sign in to your Windows 11 virtual machine (VM).
          echo "PIPELINE_END_TIME_UTC is $PIPELINE_END_TIME_UTC"
          echo "PIPELINE_START_TIME_UTC is $PIPELINE_START_TIME_UTC"
    
-         python3 -c "
+         /azagent/venv/bin/python3 -c "
          import os
          import time
          from tests.log_analytics import send_log_to_loganalytics
