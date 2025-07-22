@@ -148,7 +148,7 @@ git clone https://github.com/jruels/azure-sre
    | **Operating System** section       | Select **Linux**                                                                                      |
    | **Region** drop-down list          | Select the **East US** region                                                                           |
    | **Windows Plan (East US)** section | Select **Create new**, enter the value **srelabsplan** in the **Name** text box, and then select **OK** |
-   | **Pricing plan** section           | Select **Basic B1**                                                                                  |
+   | **Pricing plan** section           | Select **Premium v3 POV3**                                                                                |
 
 
 1. On the **Monitor + secure** tab, in the **Enable Application Insights** section, select **No**, and then select **Review + create**.
@@ -325,7 +325,7 @@ In this exercise, you created a web app in Azure, and then deployed your web app
    | **Runtime stack** drop-down list   | Select **Python 3.13**       |
    | **Operating System** section       | Select **Linux**            |
    | **Region** drop-down list          | Select the **East US** region |
-   | **Windows Plan (East US)** section | Select **srelabsplan (B1)**   |
+   | **Windows Plan (East US)** section | Select **srelabsplan (POV3)**   |
 
 
 1. On the **Monitor + secure** tab, in the **Enable Application Insights** section, select **No**, and then select **Review + create**.
