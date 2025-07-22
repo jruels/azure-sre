@@ -159,7 +159,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Use the icon (top right) to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
 
-1. Be sure to select **Bash**. If necessary, configure the shell storage.
+1. Be sure to select **Bash**. Select the subscription Azure Subscription 1 ( the only one available ) and select apply.
 
 1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [az vm create](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create) command reference for all the parameters associated with creating a virtual machine.
 
