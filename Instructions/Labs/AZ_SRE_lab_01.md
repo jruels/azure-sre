@@ -182,9 +182,9 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 ## Task 4 : Setup our Apache webserver
 
 1. Find the public IP of your VM, replacing with your assigned resource group.
-
+    >**Note:** Replace **** with your own resource group.
 ```
-az vm show --name myCLIVM --resource-group <> -d --query publicIps -o tsv
+az vm show --name myCLIVM --resource-group **** -d --query publicIps -o tsv
 ```
 
 2. SSH into your VM.
@@ -231,7 +231,6 @@ sudo systemctl enable apache2
 
 5. In the new pop up window, change Destination port ranges to **80**, and validate with Add  
 
-
 Check if you can access your apache landing page
 
 ```
@@ -246,14 +245,16 @@ http://<Your-VM-Public-IP>/index.html
     >**Note:** Replace **** with your own resource group.
     
     ```sh
-    az vm deallocate --resource-group  --name myCLIVM
+    az vm deallocate --resource-group ****  --name myCLIVM
     ```
 
 2. Verify the **powerState** is **VM Running**.
 
 
 3. Use **az vm show** to ensure the **powerState** is **VM deallocated**.
-
+   ```
+   az vm show  --name myCLIVM --resource-group training-student-0xx-lab01 --show-details | grep power
+   ```
     >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
 
 
