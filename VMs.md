@@ -1,23 +1,23 @@
-| Name                | Username    | Virtual Machine Password   | Virtual Machine Portal                        | Azure account                             | Azure account password   |
-|:--------------------|:------------|:---------------------------|:----------------------------------------------|:------------------------------------------|:-------------------------|
-| Anthony Collier     | WSAUTO25-01 | TEKwsAUTO25!               | [Ablaze Portal](https://my.ablazedesktop.com) | student001@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Brendan Kifer       | WSAUTO25-02 | TEKwsAUTO25!               |                                               | student002@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Cesar Montenegro    | WSAUTO25-03 | TEKwsAUTO25!               |                                               | student003@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| C.J. Galluze        | WSAUTO25-04 | TEKwsAUTO25!               |                                               | student004@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Duane Cain          | WSAUTO25-05 | TEKwsAUTO25!               |                                               | student005@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Felix Foret         | WSAUTO25-06 | TEKwsAUTO25!               |                                               | student006@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Jason Chick         | WSAUTO25-07 | TEKwsAUTO25!               |                                               | student007@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Jose Etchebarne     | WSAUTO25-08 | TEKwsAUTO25!               |                                               | student008@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Joshua Tripp        | WSAUTO25-09 | TEKwsAUTO25!               |                                               | student009@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Lonnie D Johnson    | WSAUTO25-10 | TEKwsAUTO25!               |                                               | student010@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Matthew Mooney      | WSAUTO25-11 | TEKwsAUTO25!               |                                               | student011@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Michael R Kozlowski | WSAUTO25-12 | TEKwsAUTO25!               |                                               | student012@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Nicholas Harris     | WSAUTO25-13 | TEKwsAUTO25!               |                                               | student013@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Preeti Choudhary    | WSAUTO25-14 | TEKwsAUTO25!               |                                               | student014@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Rubina Ahmed        | WSAUTO25-15 | TEKwsAUTO25!               |                                               | student015@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Settimo Bruzio      | WSAUTO25-16 | TEKwsAUTO25!               |                                               | student016@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Syed Mahmood        | WSAUTO25-17 | TEKwsAUTO25!               |                                               | student017@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Thomas McAniff      | WSAUTO25-18 | TEKwsAUTO25!               |                                               | student018@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Trenton Joynson     | WSAUTO25-19 | TEKwsAUTO25!               |                                               | student019@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Yam Chemoriya       | WSAUTO25-20 | TEKwsAUTO25!               |                                               | student020@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
-| Instructor          | WSAUTO25-21 | TEKwsAUTO25!               |                                               | student021@opscosolutions.onmicrosoft.com | P@ssw0rd123!             |
+| Name                  | Username    | Virtual Machine Password   | Virtual Machine Portal                        | Azure account                             | Azure account password   |
+|:----------------------|:------------|:---------------------------|:----------------------------------------------|:------------------------------------------|:-------------------------|
+| Alex App              | WSAUTO25-01 | TEKwsAUTO25                | [Ablaze Portal](https://my.ablazedesktop.com) | student001@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Charles Woelfl        | WSAUTO25-02 | TEKwsAUTO25               |                                               | student002@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Curt Zeller           | WSAUTO25-03 | TEKwsAUTO25               |                                               | student003@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Siembieda Patrone     | WSAUTO25-04 | TEKwsAUTO25               |                                               | student004@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Derek Deyarmin        | WSAUTO25-05 | TEKwsAUTO25               |                                               | student005@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Donald Brown          | WSAUTO25-06 | TEKwsAUTO25               |                                               | student006@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Dustin Williams       | WSAUTO25-07 | TEKwsAUTO25               |                                               | student007@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Gina Jones            | WSAUTO25-08 | TEKwsAUTO25               |                                               | student008@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Janki Shah            | WSAUTO25-09 | TEKwsAUTO25               |                                               | student009@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Mitch Fincher         | WSAUTO25-10 | TEKwsAUTO25               |                                               | student010@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| William Bassett       | WSAUTO25-11 | TEKwsAUTO25              |                                               | student011@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Whitney Carpenter     | WSAUTO25-12 | TEKwsAUTO25              |                                               | student012@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| John Niedbala         | WSAUTO25-13 | TEKwsAUTO25              |                                               | student013@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Jonathan Mongeau      | WSAUTO25-14 | TEKwsAUTO25             |                                               | student014@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Seth Khamvongsouk     | WSAUTO25-15 | TEKwsAUTO25              |                                               | student015@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Adam Fincke           | WSAUTO25-16 | TEKwsAUTO25             |                                               | student016@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Michael Rosich        | WSAUTO25-17 | TEKwsAUTO25             |                                               | student017@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Pavani Vadlamudi      | WSAUTO25-18 | TEKwsAUTO25             |                                               | student018@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Jim Morgan            | WSAUTO25-19 | TEKwsAUTO25             |                                               | student019@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Kene Osonwa           | WSAUTO25-20 | TEKwsAUTO25             |                                               | student020@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
+| Instructor            | WSAUTO25-21 | TEKwsAUTO25             |                                               | student021@opscosolutions.onmicrosoft.com | P@ssw0rd20250722         |
