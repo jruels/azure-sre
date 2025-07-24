@@ -166,7 +166,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. Replace the line that contains "/azagent/venv/bin/python3 -m pytest -s tests/smoke_tests.py --junitxml=smoke-results.xml" by the following:
    ```
-   export LOG_ANALYTICS_WORKSPACE_ID=$(LOG_ANALYTICS_WORKSPACE_ID
+   export LOG_ANALYTICS_WORKSPACE_ID=$(LOG_ANALYTICS_WORKSPACE_ID)
    export LOG_ANALYTICS_SHARED_KEY=$(LOG_ANALYTICS_SHARED_KEY)
    /azagent/venv/bin/python3 -m pytest -s tests/smokesmoke_tests_centralized_tests.py --junitxml=smoke-results.xml
    ```
