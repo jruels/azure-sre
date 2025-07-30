@@ -134,7 +134,7 @@ Sign in to your Windows 11 virtual machine (VM).
 ### Setup the connection between Azure DevOps and your log analytics workspace 
 
 1. Navigate to Azure, In the top search bar, type "Log Analytics workspaces" and open it.
-1. Click on the Log Analytics Workspace you're using **finapp-yourname-log-workspace**
+1. Click on the Log Analytics Workspace you're using **log-analytics-workspace**
 1. Select Settings > Agents, then expand "Log Analytics agent instructions"
 1. Copy and save in a note the values of "Workspace ID" and "Primary key"
    > **Note**: We will use these credentials to push metrics data to Azure Log Analytics from outside Azure.
