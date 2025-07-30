@@ -45,7 +45,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of your Azure subscription  |
-    | Resource group | **sre_labs_yourname** (If necessary, select **Create new**) |
+    | Resource group | **Training-Student-0xx-OC0xx** |
     | Virtual machine scale set name | `vmss1` |
     | Region | **(US)East US** |
     | Availability zone | **Zones 1, 2, 3** |
@@ -54,7 +54,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Scaling options | **Review and take the defaults**. We will change this in the next task. |
     | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
-    | Size | **Standard D2s_v3** |
+    | Size | **Standard B1s** |
     | Username | `localadmin` |
     | Password | **Provide a secure password**  |
     | Already have a Windows Server license? | **Unchecked** |
