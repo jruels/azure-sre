@@ -273,3 +273,18 @@ This will terminate the infinite loops and reduce CPU usage.
    - **Metric**: `Percentage CPU`
 4. Set **Aggregation** to `Average`.
 5. Filter by instance, and optionally change granularity to **1 minute**.
+
+---
+
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab.
+
++ Azure Virtual Machine Scale Sets (VMSS) let you deploy and manage a group of identically-configured VMs that can automatically scale to match demand.  
++ Deploying a VMSS across multiple availability zones increases fault tolerance and availability.  
++ Networking and security must be defined during deployment. Including virtual network, subnet, network security group, public load balancer and public IP address.  
++ Custom autoscale rules enable precise control over when the scale set scales out or in, based on metrics such as average CPU utilization.  
++ Instance limits (minimum, maximum and default counts) protect against over- or under-provisioning when autoscale rules run.  
++ Azure Monitor provides real-time metrics and run-history logs so you can verify and troubleshoot autoscale events.  
++ Generating workload (for example, stressing CPU inside a VM) is an effective way to test that your scale-out and scale-in rules behave as expected.  
++ VMSS reduces operational overhead by automatically distributing traffic through the load balancer and maintaining consistent configuration across all instances.
