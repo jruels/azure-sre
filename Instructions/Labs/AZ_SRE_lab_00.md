@@ -61,6 +61,8 @@ In this lab, you will connect for the first time to Azure platform and to Azure 
 
   > **Note**: You have now access to your project in the Azure DevOps cloud platform.
 
+![lab00_welcome_azure_devops.png](media/lab00_welcome_azure_devopse.png)
+
 ---
 
 ## Activity 3: Creating and Managing a Repository on GitHub
