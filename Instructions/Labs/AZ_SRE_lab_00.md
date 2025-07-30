@@ -1,13 +1,78 @@
-# Activity: Creating and Managing a Repository on GitHub
 
-## Objectives
+## Activity 1: First connection to Microsoft Azure
+
+### Objectives
+In this lab, you will connect for the first time to Azure platform and to Azure DevOps platform using the credentials provided by the instructor.
+  
+  > **Note**: Microsoft Azure is a cloud computing platform that offers a wide range of services, including computing, storage, networking, and analytics, to help organizations build, manage, and deploy applications and services. 
+
+  > **Note**: Microsoft Azure DevOps is a cloud-based platform that provides tools and services for software development teams to plan, collaborate, build, test, and deploy applications.
+
+
+### Step-by-Step Instructions
+
+1. Navigate to the Azure platform website: https://portal.azure.com/
+
+1. Use the email and password provided to you by the instructor :
+
+   Email: student0xx_OC0xx@opscosolutions.onmicrosoft.com
+   
+   Password: ***
+
+1. Click **Next**.
+   
+    ![lab00_Azure_select_account.png](media/lab00_Azure_select_account.png)
+
+1. Click **Skip setup**.
+   
+    ![lab00_skip_setup.png](media/lab00_skip_setup.png)
+
+1. On the "Stay signed in?" page, tick "Don't show this again" then click **Yes**
+
+
+  > **Note**: You have now access to your resource groups in the Azure cloud platform.
+
+![lab00_welcome_azure.png](media/lab00_welcome_azure.png)
+
+
+---
+
+## Activity 2: First connection to Microsoft Azure DevOps
+
+### Step-by-Step Instructions
+
+1. Navigate to the Azure DevOps platform website: https://dev.azure.com/opscosolutions
+
+1. Use the email and password provided to you by the instructor :
+
+   Email: student0xx_OC0xx@opscosolutions.onmicrosoft.com
+   
+   Password: ***
+
+1. Click **Next**.
+
+1. Click **Skip setup**.
+   
+    ![lab00_skip_setup.png](media/lab00_skip_setup.png)
+
+1. On the "Stay signed in?" page, tick "Don't show this again" then click **Yes**
+
+1. On the page "We need a few more details" keep the default and click **Continue**
+
+  > **Note**: You have now access to your project in the Azure DevOps cloud platform.
+
+---
+
+## Activity 3: Creating and Managing a Repository on GitHub
+
+### Step-by-Step Instructions
 
 - Learn how to create a repository on GitHub
 - Clone the repository locally
 - Add a new file containing key Git commands
 - Commit and push changes to the GitHub repository
 
-## Step-by-Step Instructions
+### Step-by-Step Instructions
 
 ### 1. Create a Repository on GitHub
 
