@@ -260,13 +260,6 @@ In this task, you will use Azure Monitor to query the data captured from the vir
     
     >**Did you know?**: Once you find a query you like, you can create an alert from it. 
 
-## Cleanup your resources
-
-If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
-
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-+ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-+ Using the CLI, `az group delete --name resourceGroupName`.
 
 ## Learn more with self-paced training
 
