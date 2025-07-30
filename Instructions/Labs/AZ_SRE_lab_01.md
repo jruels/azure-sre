@@ -72,7 +72,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
     | Setting | Value |
     | --- | --- |
-    | OS disk type | **HDD Standard** |
+    | OS disk type | **Standard HDD** |
     | Delete with VM | **checked** (default) |
     | Enable Ultra Disk compatibility | **Unchecked** |
 
@@ -104,7 +104,17 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. Wait for the deployment to complete, then select **Go to resource**.
 
-   >**Note:** Monitor the **Notification** messages.
+   >**Note:** Monitor the **Notification** messages until deployment is complete.
+
+1. In the top menu bar, search for "resource groups":
+    ![lab01_search_resource_group.png](media/lab01_search_resource_group.png)
+   
+1. From the list of resrouce groups, select your "Lab01" resource group and observe the **overview** of the different resources you created along with your 2 vms:
+    ![lab01_RG_view_deployment_complete.png](media/lab01_RG_view_deployment_complete.png)
+
+1. Select **Resource visualizer**, you can move the resources in the visual and display them as following:
+    ![lab01_resource_visualizer.png](media/lab01_resource_visualizer.png)
+
 
 ## Task 2: Manage compute and storage scaling for virtual machines
 
@@ -128,13 +138,17 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
     | Storage type | **Standard HDD** |
     | Size (GiB) | `32` |
 
-1. Click **Apply**.
+1. Click **Apply**, then **refresh**.
 
 1. After the disk has been created, click **Detach** (if necessary, scroll to the right to view the detach icon), and then click **Apply**.
 
     >**Note**: Detaching removes the disk from the VM but keeps it in storage for later use.
 
-1. Search for and select `Disks`. From the list of disks, select the **vm1-disk1** object.
+1. In the top screen menu bar, search for `Disks`:
+    
+    ![lab01_search_disks.png](media/lab01_search_disks.png)
+  
+1. From the list of disks, select the **vm1-disk1** object that you detached earlier.
 
     >**Note:** The **Overview** blade also provides performance and usage information for the disk.
 
@@ -142,6 +156,8 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Set the storage type to **Standard SSD**, and then click **Save**.
 
+    >**Note**: You can scale up the disk now that it is detached.
+    
 1. Navigate back to the **lab01-vm1** virtual machine and select **Disks**.
 
 1. In the **Data disk** section, select **Attach existing disks**.
@@ -159,7 +175,14 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Use the icon (top right) to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
 
+    >**Note:** Azure CLI is a cross-platform command-line tool used to connect to Azure and execute administrative commands on Azure resources, either interactively or through scripts.
+    
+    >**Note:** Cloud Shell is a browser-based, interactive, and authenticated shell environment for managing Azure resources, offering both Bash and PowerShell as shell options.
+
+    ![lab01_menu_cloud_shell.png](media/lab01_menu_cloud_shell.png)
+    
 1. Be sure to select **Bash**. Select the subscription Azure Subscription 1 ( the only one available ) and select apply.
+    ![lab01_setup_cloud_shell.png](media/lab01_setup_cloud_shell.png)
 
 1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [az vm create](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create) command reference for all the parameters associated with creating a virtual machine.
 
@@ -183,41 +206,46 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Find the public IP of your VM, replacing with your assigned resource group.
     >**Note:** Replace **** with your own resource group.
-```
-az vm show --name myCLIVM --resource-group **** -d --query publicIps -o tsv
-```
+
+    ```
+    az vm show --name myCLIVM --resource-group **** -d --query publicIps -o tsv
+    ```
 
 2. SSH into your VM.
    
-```
-ssh localadmin@<Public-IP>
-```
+    ```
+    ssh localadmin@<Public-IP>
+    ```
 
 3. First time SSH warning, type yes and press enter:
    
-```
-Are you sure you want to continue connecting (yes/no/[fingerprint])? 
-```
+    ```
+    Are you sure you want to continue connecting (yes/no/[fingerprint])? 
+    ```
+    
+    >**Note:** You are now connected on your virtual machine though secure connection.
+        
+    ![lab01_ssh_connected_to_clivm.png](media/lab01_ssh_connected_to_clivm.png)
+
 
 4. Update your servers packages.
    
-```
-sudo apt update
-```
+    ```
+    sudo apt update
+    ```
 
 5. Install Apache
    
-```
-sudo apt install apache2 -y
-```
+    ```
+    sudo apt install apache2 -y
+    ```
 
 6. Start & Enable the service 
 
-```
-sudo systemctl start apache2
-sudo systemctl enable apache2
-
-```
+    ```
+    sudo systemctl start apache2
+    sudo systemctl enable apache2
+    ```
 
 ### Allow Inbound Traffic through port 80 from any source
 
@@ -231,11 +259,16 @@ sudo systemctl enable apache2
 
 5. In the new pop up window, change Destination port ranges to **80**, and validate with Add  
 
-Check if you can access your apache landing page
+6. Check if you can access your apache landing page
 
-```
-http://<Your-VM-Public-IP>/index.html
-```
+    ```
+    http://<Your-VM-Public-IP>/index.html
+    ```
+
+    > **Note:** You should see the Apache Web server landing page.
+    
+![lab01_apache_landing_page.png](media/lab01_apache_landing_page.png)
+    
 
 ### Deallocate your VM
 
@@ -256,13 +289,6 @@ http://<Your-VM-Public-IP>/index.html
    az vm show  --name myCLIVM --resource-group training-student-0xx-lab01 --show-details | grep power
    ```
     >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
-
-
-## Cleanup your resources
-
-1. When you are done with the lab, delete the resource group you created, we will use a different one for our future labs !
-2. Go to Azure Portal, Navigate to your Resource Group
-3. Hit the Delete Resource Group button with the bin. It will ask for your confirmation, type the resource group name and hit delete.
 
 
 ## Learn more with self-paced training
