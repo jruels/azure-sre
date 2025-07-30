@@ -1,4 +1,4 @@
-Virtual Machine - Ablaze Portal : [Ablaze Portal](https://my.ablazedesktop.com)
+Virtual Machine - Ablaze Portal Link  : [Ablaze Portal](https://my.ablazedesktop.com)
 
 | Lastname   | Firstname   | Ablaze Username | Ablaze Account Password | Azure Account                                     | Azure Password |
 |------------|-------------|------------------|--------------------------|---------------------------------------------------|----------------|
