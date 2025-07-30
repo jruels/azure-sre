@@ -62,7 +62,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
-    | Resource group| `Training-Student-0xx-Lab03` |
+    | Resource group| `Training-Student-0xx-OC0xx-Lab03` |
     | Region        | **East US**   |
     | Username      | `localadmin`   |
     | Password      | Provide a complex password |
@@ -72,6 +72,10 @@ In this task, you will deploy a virtual machine that will be used to test monito
 1. Wait for the deployment to finish, then click **Go to resource group**.
 
 1. Review what resources were deployed. There should be one virtual network with one virtual machine.
+   
+1. Select **Resource visualizer**, you can move the resources in the visual and display them as following:
+   
+    ![lab03_resource_visualizer.png](media/lab03_resource_visualizer.png)
 
 **Configure Azure Monitor for virtual machines (this will be used in the last task)**
 
@@ -83,7 +87,9 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Select **Enable** next to your virtual machine, and then **Enable on the Azure Monitor - Insights Onboarding** blade.
 
-1. Take the defaults for subscription and data collection rules, then select **Configure**. 
+1. Take the defaults for subscription and data collection rules, then select **Configure**.
+   
+    ![lab03_enable_vm_insight.png](media/lab03_enable_vm_insight.png)
 
 1. It will take a few minutes for the virtual machine agent to install and configure, proceed to the next step. 
    
@@ -95,7 +101,9 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 1. Select **Create +** and select **Alert rule**. 
 
-1. Select the box for the subscription, then select **Apply**. This alert will apply to any virtual machines in the subscription. Alternatively, you could just specify one particular machine. 
+1. Select the box of your "Lab03" resource group, then select **Apply**. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine.
+
+    ![lab03_setup_alert_rule.png](media/lab03_setup_alert_rule.png)
 
 1. Select the **Condition** tab and then select the **See all signals** link.
 
@@ -122,7 +130,7 @@ In this task, if the alert is triggered send an email notification to the operat
     |---------|---------|
     | **Project details** |
     | Subscription | your subscription |
-    | Resource group | **Training-Student-0xx-Lab03** |
+    | Resource group | **Training-Student-0xx-OC0xx-Lab03** |
     | Region | **Global** (default) |
     | **Instance details** |
     | Action group name | `Alert the operations team` (must be unique in the resource group) |
@@ -147,7 +155,7 @@ In this task, if the alert is triggered send an email notification to the operat
     |---------|---------|
     | Alert rule name | `VM was deleted` |
     | Alert rule description | `A VM in your resource group was deleted` |
-    | Resource group | **Training-Student-0xx-Lab03** |
+    | Resource group | **Training-Student-0xx-OC0xx-Lab03** |
     | Region | **Global** (default) |
 
 1. Select **Review + create** to validate your input, then select **Create**.
@@ -208,7 +216,7 @@ Enter these settings for the scheduling of the alert processing rule:
 
     | Setting | Value |
     |---------|---------|
-    | Resource group | **Training-Student-0xx-Lab03** |
+    | Resource group | **Training-Student-0xx-OC0xx-Lab03** |
     | Rule name | `Planned Maintenance` |
     | Description | `Suppress notifications during planned maintenance.` |
 
