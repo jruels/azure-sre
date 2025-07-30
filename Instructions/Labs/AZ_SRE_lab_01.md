@@ -53,7 +53,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of your Azure subscription |
-    | Resource group |  select the resource group **Training-Student-0xx-Lab01** |
+    | Resource group |  select the resource group **Training-Student-0xx-OC0xx-Lab01** |
     | Virtual machine names | `lab01-vm1` and `lab01-vm2` (After selecting both availability zones, select **Edit names** under the VM name field.) |
     | Region | **East US** |
     | Availability options | **Availability zone** |
@@ -286,7 +286,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 3. Use **az vm show** to ensure the **powerState** is **VM deallocated**.
    ```
-   az vm show  --name myCLIVM --resource-group training-student-0xx-lab01 --show-details | grep power
+   az vm show  --name myCLIVM --resource-group Training-Student-0xx-OC0xx-Lab01 --show-details | grep power
    ```
     >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
 
