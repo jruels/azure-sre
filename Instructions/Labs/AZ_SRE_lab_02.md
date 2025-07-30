@@ -30,7 +30,8 @@ In this lab, you will explore how to create a web application and blob storage o
 
 #### Sign in to the lab environment.
 
-Sign in to your Windows 11 virtual machine (VM).
+1. Sign in to your Windows 11 virtual machine (VM).
+[Link to the credentials](https://github.com/jruels/azure-sre/blob/main/VMs.md)
 
 > **Note**: Your instructor will provide instructions to connect to the virtual lab environment.
 
@@ -80,22 +81,48 @@ Sign in to your Windows 11 virtual machine (VM).
 1. On the **Access keys** blade, review any one of the **Connection string**s (using **Show** button), and then record the value of either **Connection string** boxes in Notepad. 
 
    > **Note**: It doesn't matter which **connection string** you choose. They are interchangeable.
-   > 
+   
    > ⚠️ The **Keys** are platform-managed encryption keys and are **not used for this lab.**
 
-1. Open Notepad, and then paste the copied connection string value into Notepad. You'll use this value later in this lab.
+1. ⚠️ Open a Notepad file, and then paste the copied **connection string** value into Notepad. **You'll use this value later in this lab.**
 
 #### Task 3: Download the repository "azure-sre" to your computer
 
-1. On the taskbar, select the **Visual Studio Code** icon.
+2. On your windows VM, use the taskbar, select the **Visual Studio Code** icon.
    
-1. On your Visual Studio, launch a Git Bash Terminal (From the menur bar: Terminal > New Terminal), then select the **Git Bash** with the **'+'** icon.
+1. On your Visual Studio, we will launch a Git Bash Terminal
+  
+3. First, look at the top bar of Visual Studio for Terminal. If you don't see it you might need to hit the "..." and select Terminal. Choose New Terminal.
 
-3. Clone the GitHub repository
+4. A terminal should now be accessible with Power Shell by default. We want to use  **Git Bash** instead.
+
+5. To open a new terminal follow the steps as per the screenshots, clic on the "▼" next to "+", then choose **Git Bash**
+
+   ![new terminal](https://github.com/jruels/azure-sre/blob/main/Instructions/Labs/media/visual_studio_new_terminal.png)
+
+   ![Git Bash terminal](https://github.com/jruels/azure-sre/blob/main/Instructions/Labs/media/visual_studio_select_git_bash.png)
+
+   > **Note**: If you don't see a terminal (From the menu bar at the top: Terminal > New Terminal)
+
+7. The terminal inside your Visual Studio should look like the screenshot below :
+
+   ![Git Bash](https://github.com/jruels/azure-sre/blob/main/Instructions/Labs/media/visual_studio_git_bash.png)
+
+
+8. Clone the GitHub repository
 ```
 git clone https://github.com/jruels/azure-sre
 
 ```
+8. This repository contain all the labs material that we will be using later in this course.
+
+9. Now that this repository is on your windows VM, you can use file explorer to access it's location
+
+10. On your windows VM, use the task bar to launch **File Explorer**
+
+11. Go to the folder **Users**, then **TekStudent**
+
+12. Your repo should be here under the name **azure-sre**
 
 #### Task 4: Upload a file in a container of your blob storage
 
@@ -169,7 +196,6 @@ git clone https://github.com/jruels/azure-sre
    ```
    python3.13 -m pip install -r requirements.txt && gunicorn --bind=0.0.0.0 --timeout 600 application:app
    ```
-
    > **Note**: This makes sure the requirements are installed and the application runs on startup.
 
 1. Under "Platform settings", select "On" for the option **SCM Basic Auth Publishing Credentials**
@@ -208,7 +234,9 @@ git clone https://github.com/jruels/azure-sre
 
 1. On line 95, observe the **list_blobs()** method and the code used to retrieve and filter all blobs from the **reports** container.
 
-1. On your Visual Studio, launch a Git Bash Terminal (From the menur bar: Terminal > New Terminal), then select the **Git Bash** with the **'+'** icon.
+5. Open a new terminal in **visual studio**, clic on the "▼" next to "+", then choose **Git Bash**
+
+   > **Note**: If you don't see a terminal (From the menu bar at the top: Terminal > New Terminal)
 
 1. At the open terminal, enter the following command, and then select Enter to sign in to the Azure Command-Line Interface (CLI):
 
@@ -421,6 +449,7 @@ In this exercise, you created a web app in Azure, and then deployed your web app
    ```
 
    > **Note**: Replace the *\<name-of-your-web-app\>* placeholder with the name of the web app that you created previously in this lab. You recently queried this app’s name in the previous steps.
+   > **Note**: If your deployment runs for more than 2 minutes, check if http://finweb-yourname.azurewebsites.net is accessible. Replace yourname by your actual finweb app name.
 
 1. On the **App Service** blade, select the **Log stream** link. You can monitor the deployment status in the logs. 
 
@@ -466,7 +495,11 @@ In this exercise, you created a web app in Azure, and then deployed your web app
 
 1. Create two GIT repositories using your personnal GitHub account : finfront_yourname, finapi_yourname
 
-1. Clone the two associated repositories on your VM, using gitbash
+1. Clone the two associated repositories on your Windows VM
+  
+3. Open **Visual Studio** , open a **Git Bash** Terminal
+
+4. Perform the command below, replace the github links by your repository links and your account.
 
    `cd ~`
 
