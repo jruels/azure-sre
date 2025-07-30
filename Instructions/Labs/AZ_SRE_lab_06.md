@@ -271,8 +271,8 @@ Sign in to your Windows 11 virtual machine (VM).
    git commit -m "new service"
    git push
    ```
-   > **Notes:** Wait for the run of the smoke tests pipeline (after build and deploy)
-   > You should then receive an alert notification email triggered by a failed test 
+   > **Notes:** Wait for the run of the smoke tests pipeline (after build and deploy).
+   > You will receive an alert notification email triggered by a failed test.
 
 1. Navigate back to Azure DevOps to investigate the logs of the smoke test pipeline.
 
