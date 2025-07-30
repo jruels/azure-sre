@@ -1,3 +1,4 @@
+# Becoming familiar with Github & connection to Azure Portal and Azure Devops
 
 ## Activity 1: First connection to Microsoft Azure
 
