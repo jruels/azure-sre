@@ -120,9 +120,11 @@ git clone https://github.com/jruels/azure-sre
 
 10. On your windows VM, use the task bar to launch **File Explorer**
 
-11. Go to the folder **Users**, then **TekStudent**
+11. In file explorer, go to your **C drive**, then folder **Users**, then **TekStudent**
 
 12. Your repo should be here under the name **azure-sre**
+
+![teksystem_file_explorer](./media/teksystem.png)
 
 #### Task 4: Upload a file in a container of your blob storage
 
