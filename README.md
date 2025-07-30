@@ -24,3 +24,4 @@ Feel free to explore each lab and follow the instructions to complete the exerci
 - [Azure portal](https://github.com/jruels/azure-sre)
 - [GitHub: How to Create an Account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github)  
 - [GitHub: How to Create a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories)
+- [2FA Youtube Link ( only open in Ablaze VM )](https://www.youtube.com/watch?v=PtVAD4EDsQQ)
