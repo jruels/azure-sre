@@ -2,7 +2,7 @@ Virtual Machine - Ablaze Portal : [Ablaze Portal](https://my.ablazedesktop.com)
 
 | Lastname   | Firstname   | Ablaze Username | Ablaze Account Password | Azure Account                                     | Azure Password |
 |------------|-------------|------------------|--------------------------|---------------------------------------------------|----------------|
-| Lamba      | Ashish      | WSAUTO25-01      | TEKwsauto25!             | student001_OC006@opscosolutions.onmicrosoft.com  |                |
+| Lamba      | Ashish      | WSAUTO25-01      | TEKwsauto25!             | student001_OC006@opscosolutions.onmicrosoft.com  | P@ssw0rd20250730!|
 | Basko      | Chris       | WSAUTO25-02      | TEKwsauto25!             | student002_OC006@opscosolutions.onmicrosoft.com  |                |
 | Boron      | Chris       | WSAUTO25-03      | TEKwsauto25!             | student003_OC006@opscosolutions.onmicrosoft.com  |                |
 | Kostival   | Donald      | WSAUTO25-04      | TEKwsauto25!             | student004_OC006@opscosolutions.onmicrosoft.com  |                |
