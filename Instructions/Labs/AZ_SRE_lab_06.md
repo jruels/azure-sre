@@ -365,7 +365,8 @@ Sign in to your Windows 11 virtual machine (VM).
    ```
 1. Do the same for the pipelines **finapi_yourname_build** and **finapi_yourname_deploy**
    > **Notes:** Additional step, link the "LogAnalyticsSecrets" variable
-   > Insert the following **after** the line that contains "variables:"
+   
+   > **Notes:** Insert the following **after** the line that contains "variables:"
    > ```
    >   - group: LogAnalyticsSecrets
    >
