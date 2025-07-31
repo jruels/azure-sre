@@ -82,7 +82,9 @@ Sign in to your Windows 11 virtual machine (VM).
    ```
    
 1. Save and run  
-1. Click on the job to access the logs, observe how many tests passed and the error in the logs of the task **Run full smoke test suite**
+1. Click on the job to access the logs, observe how many tests passed and the error in the logs of the task **Run full smoke test suite**   
+   > **Note**: By investigating the log message you should identify the root-cause: a timeout error.
+
 
 ### Fine tune your tests
 
@@ -190,7 +192,7 @@ Sign in to your Windows 11 virtual machine (VM).
    git commit -m "new service"
    git push
    ```
-   > Wait for the run of the smoke tests pipeline (after build and deploy), and check the logs
+   > **Note:** Make sure your pipelines run in this order: build -> deploy -> smoke tests.
 
 1. You should see the message "This pipeline needs permission to access a resource before this run can continue". Click View, then **Permit**
    ![image](media/permit_pipeline.png)
@@ -278,7 +280,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Navigate to your local git api repository
 1. Modify the file **smoke_tests_centralized.py**. Replace "response = requests.request(method, url, timeout=10)" with the following:
    ```
-   response = requests.request(method, url, timeout=4)
+   response = requests.request(method, url, timeout=5)
    ```
    > **Notes:** With this change we make sure the test_slow_endpoint will fail.
 
@@ -288,8 +290,8 @@ Sign in to your Windows 11 virtual machine (VM).
    git commit -m "new service"
    git push
    ```
-   
-1. Make sure your pipelines run in this order: build -> deploy -> smoke tests.
+
+1. Navigate to Pipelines > **finapi_yourname_smoke_test** then select **Run pipeline**.
    
    > **Notes:** The smoke test will fail and you will receive an alert notification email triggered by the failed test.
 
