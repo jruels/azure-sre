@@ -394,6 +394,11 @@ Sign in to your Windows 11 virtual machine (VM).
    
 1. Explore the latest pipeline runs data, run the following:
    ```
+   // Explore the table content
+   PipelineRunSummary_CL
+   ```
+
+   ```
    // Average duration per pipeline
    PipelineRunSummary_CL
    | summarize avg(duration_seconds_d) by pipeline_s
