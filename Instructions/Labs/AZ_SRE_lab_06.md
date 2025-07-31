@@ -205,10 +205,11 @@ Sign in to your Windows 11 virtual machine (VM).
    ```
    //Test Duration per Endpoint
    SmokeTestResults_CL
-   | summarize avg_duration = avg(duration_d) by test_s
+   | summarize avg_duration = avg(duration_seconds_d) by test_s
    | order by avg_duration desc
    | render barchart
    ```
+   ![lab06_query_visualization_1.png](media/lab06_query_visualization_1.png)
 
 1. Select **+ Add a new Tab**, enter the following and **Run**:
    ```
@@ -238,6 +239,8 @@ Sign in to your Windows 11 virtual machine (VM).
    ```
 
 1. At the top of the Logs screen, click "New alert rule".
+
+   ![lab06_query_new_alert_rule.png](media/lab06_query_new_alert_rule.png)
 
 1. Under “Alert logic”, select:
    - Operator: greater than
@@ -355,6 +358,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. You should now see **PipelineRunSummary_CL** in addtion of **SmokeTestResults_CL**
    
    ![image](media/custom_logs_tables.png)
+   
 1. Explore the latest pipeline runs data, run the following:
    ```
    // Average duration per pipeline
