@@ -242,24 +242,37 @@ Sign in to your Windows 11 virtual machine (VM).
 
    ![lab06_query_new_alert_rule.png](media/lab06_query_new_alert_rule.png)
 
-1. Under “Alert logic”, select:
+1. Under “Alert logic” (scroll down), select:
    - Operator: greater than
    - Threshold value: 0
    - Frequency of evaluation: 5 minutes
 
-   > **Notes:** This means any failures happen in the last 5 min, triggers the alert.
+   > **Notes:** This means any failures that happen in the last 5 min, triggers the alert.
 
-1. Select **Next:Actions**, and Enter the following:
+1. Select **Next:Actions**, click on **+ Create action group** and Enter the following:
    - Action group name: api_test_fail
-   - Display name: api_test_fail
+   - Display name: api_fail
    - Email: <youremail>
-   
+
+   ![lab06_setup_action_group.png](media/lab06_setup_action_group.png)
+
+1. Select **Next:Notifications**, and enter the following:
+   - Notification type: Email/SMS message/Push/Voice
+   - Name: "API Test Failure"
+   - Email: any email adress you can access
+
+1. Select **Review+Create**, then **Create**
+
+   > **Notes:** With this step you created the action group that will send an alert email to the sre team (you).
+     
 1. Select **Next:Details**, and enter the following:
    - Severity: "1 - Error"
    - Alert rule name: api_test_fail
 
 1. Select **Review+Create**, then **Create**
 
+   > **Notes:** Congrats, with this step you created the alert rule that will trigger the action group.
+   
 ### Test Alert Notification trigger
 
 1. Navigate to your local git api repository
