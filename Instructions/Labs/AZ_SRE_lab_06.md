@@ -199,7 +199,7 @@ Sign in to your Windows 11 virtual machine (VM).
 ## Task 3: Setup metrics visualizations and alerts
 
 1. Navigate to Azure, In the top search bar, type "Log Analytics workspaces" and open it.
-1. Click on the Log Analytics Workspace you're using **finapp-yourname-log-workspace**
+1. Click on the Log Analytics Workspace you're using **log-analytics-workspace**
 1. Select **Logs**, then change from "Simple Mode" to **KQL mode**
 1. Enter the following query and **Run**:
    ```
@@ -350,7 +350,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Push your changes
    > **Notes:** The 3 api pipelines will run and trigger in cascade (build -> deploy -> post-release test) 
 1. Navigate to Azure, In the top search bar, type "Log Analytics workspaces" and open it.
-1. Click on the Log Analytics Workspace you're using **finapp-yourname-log-workspace**
+1. Click on the Log Analytics Workspace you're using **log-analytics-workspace**
 1. Select **Logs**, then **Tables**, and expand **Custom Logs**.
 1. You should now see **PipelineRunSummary_CL** in addtion of **SmokeTestResults_CL**
    
