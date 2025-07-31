@@ -30,5 +30,5 @@ def test_list_reports():
     assert r.status_code in [200, 500]  # 500 = fallback if storage missing
 
 def test_slow_endpoint():
-    r = requests.get(f"{BASE_URL}/api/slow-endpoint", timeout=5)
+    r = requests.get(f"{BASE_URL}/api/slow-endpoint", timeout=4)
     assert r.status_code == 200
