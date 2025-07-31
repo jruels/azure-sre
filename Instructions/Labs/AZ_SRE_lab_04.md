@@ -38,9 +38,10 @@ Sign in to your Windows 11 virtual machine (VM).
 ### Frontend 
 
 1. Connect to your Windows VM
-1. Navigate to your local git frontend repository
+1. Navigate to your local git frontend repository. In lab02, you cloned your repository in your home folder (C:\users\teksystem)
 1. Edit the file app.py
     > **Note**: If you edit using vi, make sure to use `set number` command to view the file line numbers
+1. If you are not at ease with linux commands, you can do these steps in github directly. If you do skip "Push your change" step
 1. Go to line 80, then insert the code provided below.
 1. Save the file
 
@@ -72,10 +73,14 @@ Sign in to your Windows 11 virtual machine (VM).
 
 ### API 
 
-1. Navigate to your local git api repository
+1. Navigate to your local git api repository, it should be in your home folder C:\users\teksystem
+
 1. edit the file application.py
-    > **Note**: If you edit using vi, make sure to use `set number` command to view the file line numbers
-1. Go to bottom of the file, then copy the code provided below
+    > **Note**: If you edit using vi, make sure to use `set number` command to view the file line numbers.
+    
+
+3. If you are not at ease with linux commands, you can do these steps in github directly. If you do skip "i. Push your change" step
+4. Go to bottom of the file, then copy the code provided below
     ```
     @app.route('/api/slow-endpoint')
     def slow_endpoint():
@@ -108,17 +113,14 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Go to Settings > Configuration, and remove the startup command
     > **Note**: Deploying with Azure DevOps will enable a better startup component
 
-1. Go to the Deployment Center, and click Disconnect. Accept the message when prompted
+1. Go to the Deployment Center, Settings and click Disconnect. Refer to screenshots below:
 
-1. Execute the following command, replacing with your student number
+![settings](./media/deploy_settings.png)
 
-    ```
-    curl -i "https://finweb-student099.azurewebsites.net/"
-    ```
-
+![disconnect](./media/disconnect.png)
+   
     
-
-1. Repeat these steps for your finapi
+1. Repeat these steps for your finapi web app.
 
 
 ### Set up our pipelines in Azure Devops
@@ -127,7 +129,11 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. Navigate to **https://dev.azure.com/opscosolutions** and select your project Training-Student-0xx-OC0xx
    
-1. Click the **User Setting** at the top right of your screen. Then **Personal Access Tokens**
+1. Click the **User Setting** at the top right of your screen.
+
+![devops_token](./media/devops_token.png)
+  
+3. Then **Personal Access Tokens**
    
 1. Click new token
    
@@ -154,7 +160,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. In the Configure Your Pipeline step choose Starter Pipeline
 
-1. Rename your pipeline file from "azure-pipelines.yml" to **finweb_yourname_build**
+1. Rename your pipeline file from "azure-pipelines.yml" to **finweb_yourname_build.yml**
    
    ![image](media/step2.png)
 
@@ -188,13 +194,13 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Rename your pipeline file from "azure-pipelines.yml" to **finweb_yourname_deploy.yml**
    ![image](media/step2.png)
    
-1. Here copy the code from the lab repository : /AllFiles/Labs/04/Pipelines/Web/frontend_deploy.yml
+1. Remove all the sample code from your starter pipeline and copy the code from the lab repository : /AllFiles/Labs/04/Pipelines/Web/frontend_deploy.yml
 
-1. Replace the placeholders in the file:
-   - <YOUR AZURE DEVOPS PROJECT> should be configured like **Training-Student-0xx-OC0xx**
-   - <YOUR BUILD PIPELINE> should be configured like **finweb_yourname_build**
-   - <YOUR RESOURCE GROUP> should be configured like **Training-Student-0xx-OC0xx**
-   - <YOUR WEB APP> should be configured like **finweb-yourname**
+1. Replace the placeholders in the file by your account values:
+   - <<< YOUR AZURE DEVOPS PROJECT >>> should be configured like **Training-Student-0xx-OC0xx**
+   - <<< YOUR BUILD PIPELINE >>> should be configured like **finweb_yourname_build**
+   - <<< YOUR RESOURCE GROUP >>> should be configured like **Training-Student-0xx-OC0xx**
+   - <<< YOUR WEB APP >>> should be configured like **finweb-yourname**
    
 1. Click on Variables, add a new one
    
@@ -222,7 +228,7 @@ Sign in to your Windows 11 virtual machine (VM).
    
 1. In the Configure Your Pipeline step choose Starter Pipeline
    
-1. Rename your pipeline file from "azure-pipelines.yml" to **finapi_yourname_build**
+1. Rename your pipeline file from "azure-pipelines.yml" to **finapi_yourname_build.yml**
    
    ![image](media/step2.png)
    
