@@ -316,10 +316,10 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Replace the line "steps:" by the following:
    ```
    steps:
-   - script: |
-         echo "##vso[task.setvariable variable=PIPELINE_START_TIME]$(date +%s.%3N)"
-         echo "##vso[task.setvariable variable=PIPELINE_START_TIME_UTC]$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-     displayName: "Capture pipeline start time"
+      - script: |
+            echo "##vso[task.setvariable variable=PIPELINE_START_TIME]$(date +%s.%3N)"
+            echo "##vso[task.setvariable variable=PIPELINE_START_TIME_UTC]$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+        displayName: "Capture pipeline start time"
    
    ```
 
