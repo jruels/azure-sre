@@ -84,6 +84,9 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Save and run  
 1. Click on the job to access the logs, observe how many tests passed and the error in the logs of the task **Run full smoke test suite**   
    > **Note**: By investigating the log message you should identify the root-cause: a timeout error.
+   
+   > **Note**: You can also display the test results of your test pipeline in the **Tests** tab. Open the pipeline and click on Tests (next to Summary)
+   ![lab06_test_tab_with_timeout.png](media/lab06_test_tab_with_timeout.png)
 
 
 ### Fine tune your tests
@@ -92,7 +95,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. Navigate to your local git api repository
 1. Edit the file smoke_test.py
-1. Modify the timeout of the test **slow-endpoint** test, from 5 seconds to 10 seconds
+1. Modify the timeout of the test **slow-endpoint** test, from 4 seconds to 10 seconds
    ```
    def test_slow_endpoint():
        r = requests.get(f"{BASE_URL}/api/slow-endpoint", timeout=10)
@@ -280,7 +283,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Navigate to your local git api repository
 1. Modify the file **smoke_tests_centralized.py**. Replace "response = requests.request(method, url, timeout=10)" with the following:
    ```
-   response = requests.request(method, url, timeout=5)
+   response = requests.request(method, url, timeout=4)
    ```
    > **Notes:** With this change we make sure the test_slow_endpoint will fail.
 
@@ -373,12 +376,15 @@ Sign in to your Windows 11 virtual machine (VM).
    > ```
 1. Select **Validate and Save**
    
-1. Then in **smoke_tests_centralized.py**, replace the line "response = requests.request(method, url, timeout=5)" with the following:
+1. Then in **smoke_tests_centralized.py**, replace back the line "response = requests.request(method, url, timeout=4)" with the following:
    ```
    response = requests.request(method, url, timeout=10)
    ```
-1. Push your changes
-   > **Notes:** The 3 api pipelines will run and trigger in cascade (build -> deploy -> post-release test) 
+1. Save and push your changes
+
+1. Navigate to Pipelines > **finapi_yourname_smoke_test** then select **Run pipeline**.
+   > **Notes:** From now on your 3 Azure DevOp pipelines will send run analytics to Azure at every run, in addition to the functional test results
+   
 1. Navigate to Azure, In the top search bar, type "Log Analytics workspaces" and open it.
 1. Click on the Log Analytics Workspace you're using **log-analytics-workspace**
 1. Select **Logs**, then **Tables**, and expand **Custom Logs**.
@@ -401,6 +407,8 @@ Sign in to your Windows 11 virtual machine (VM).
    | where status_s != "Succeeded"
    | summarize FailureCount = count()
    ```
+
+> **Notes:** Congrats, you can now pilot your application tests results and your pipelines' performance in Azure.
 
 ---
 
