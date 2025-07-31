@@ -80,7 +80,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 ### Generate traffic and check the Metrics & Logs are available
 
-1. In your Visual Studio, open a terminal and run the below commands :
+1. In your Visual Studio, open a terminal and run the below commands, make sure to replace finweb and finapi by your links:
 
    ```
    # Front end Traffic
