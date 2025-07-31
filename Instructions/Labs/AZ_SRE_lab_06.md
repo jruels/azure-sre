@@ -278,8 +278,9 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Navigate to your local git api repository
 1. Modify the file **smoke_tests_centralized.py**. Replace "response = requests.request(method, url, timeout=10)" with the following:
    ```
-   response = requests.request(method, url, timeout=5)
+   response = requests.request(method, url, timeout=4)
    ```
+   > **Notes:** With this change we make sure the test_slow_endpoint will fail.
 
 1. Push your changes
    ```
@@ -287,10 +288,20 @@ Sign in to your Windows 11 virtual machine (VM).
    git commit -m "new service"
    git push
    ```
-   > **Notes:** Wait for the run of the smoke tests pipeline (after build and deploy).
-   > You will receive an alert notification email triggered by a failed test.
+   
+1. Make sure your pipelines run in this order: build -> deploy -> smoke tests.
+   
+   > **Notes:** The smoke test will fail and you will receive an alert notification email triggered by the failed test.
 
-1. Navigate back to Azure DevOps to investigate the logs of the smoke test pipeline.
+1. Confirm you received the alert email in your mailbox and open it.
+   
+   ![lab06_email_alert.png](media/lab06_email_alert.png)
+   
+1. Scroll down and click on **View alert details**
+
+   ![lab06_alert_details.png](media/lab06_alert_details.png)
+
+   > **Notes:** This will be the entry point for sre team to investigate the api test failure.
 
 
 ## Task 4: Send all API Pipeline run metrics to your centralized Azure Log Analytics
