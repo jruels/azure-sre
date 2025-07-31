@@ -301,7 +301,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
    ![lab06_alert_details.png](media/lab06_alert_details.png)
 
-   > **Notes:** This will be the entry point for sre team to investigate the api test failure.
+   > **Notes:** Congrats, this will be the entry point for sre team to investigate the api test failure.
 
 
 ## Task 4: Send all API Pipeline run metrics to your centralized Azure Log Analytics
