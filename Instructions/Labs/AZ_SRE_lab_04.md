@@ -15,7 +15,8 @@ In this lab, you will explore release process & engineering
 ## Job skills
 
 + Task 1: Deploying with GitHub Action
-+ Task 2: Deploying with Azure DevOps
++ Task 2: Deploying with Azure DevOps Pipelines for our Front End
++ Task 3: Deploying with Azure Devops Pipelines for our Api
 
 ## Azure Web Application Architecture Diagram
 
@@ -104,7 +105,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. After the deployment is complete, check the endpoint is working
 
-## Task 2 : Deploying complex pipelines with Azure Devops
+## Task 2 : Deploying with Azure DevOps Pipelines for our Front End
 
 ### Remove the previous configuration 
 
@@ -125,7 +126,7 @@ Sign in to your Windows 11 virtual machine (VM).
 
 ### Set up our pipelines in Azure Devops
 
-#### Generate a token for devops pipeline
+#### Step 0 Generate a token for devops pipeline
 
 1. Navigate to **https://dev.azure.com/opscosolutions** and select your project Training-Student-0xx-OC0xx
    
@@ -142,7 +143,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Click Create and **save the token**, we will use this value later.   
 
 
-#### Frontend Package Building 
+#### Step 1 Frontend Package Building 
 
 1. Navigate to **https://dev.azure.com/opscosolutions** and select your project Training-Student-0xx-OC0xx
    
@@ -179,7 +180,7 @@ Sign in to your Windows 11 virtual machine (VM).
    ![image](media/step3.png)
 
 
-#### Frontend Package Deploy
+#### Step 2 Frontend Package Deploy
 
 1. Navigate to **https://dev.azure.com/opscosolutions** and select your project Training-Student-0xx-OC0xx
    
@@ -213,6 +214,9 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Navigate to Pipelines, select the 3 dots options on the right side of the line of the pipeline. Select Rename, and input **finweb_yourname_deploy**
 
 1. In Azure, you should be able to see a new deployment on your front end app, check the log stream
+
+   
+## Task 3 : Deploying with Azure DevOps Pipelines for our API
 
 #### API Package Build
 
