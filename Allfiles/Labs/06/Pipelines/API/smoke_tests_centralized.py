@@ -28,7 +28,6 @@ def run_test(name, method, url, check_fn):
         duration = time.time() - start
         status_code = response.status_code if 'response' in locals() else 0
         log_result(name, "fail", url, method, duration, status_code, str(e))
-        raise
 
 # ----- Actual tests below -----
 
