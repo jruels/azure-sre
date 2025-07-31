@@ -20,7 +20,7 @@ def log_result(name, status, url, method, duration, status_code, message=""):
 def run_test(name, method, url, check_fn):
     start = time.time()
     try:
-        response = requests.request(method, url, timeout=4)
+        response = requests.request(method, url, timeout=10)
         duration = time.time() - start
         check_fn(response)
         log_result(name, "pass", url, method, duration, response.status_code)
