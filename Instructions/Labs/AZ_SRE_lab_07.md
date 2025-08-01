@@ -45,7 +45,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of your Azure subscription  |
-    | Resource group | **Training-Student-0xx-OC0xx** |
+    | Resource group | **Training-Student-0xx-OC0xx-Lab07** |
     | Virtual machine scale set name | `vmss1` |
     | Region | **(US)East US** |
     | Availability zone | **Zones 1, 2, 3** |
@@ -66,16 +66,17 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Disks** tab, accept the default values and click **Next : Networking >**.
 
-1. On the **Networking** page, select **Edit virtual network** link. Make a few changes. When finished, select **OK**.
+1. On the **Networking** page, select **Edit virtual network** link. Make the following changes. When finished, select **Save**.
 
     | Setting | Value |
     | --- | --- |
     | Name | `vmss-vnet` |
-    | Address range | `10.82.0.0/20` (delete the existing address range) |
-    | Subnet name | `subnet0` |
-    | Subnet range | `10.82.0.0/24` |
+    | Address range | `10.82.0.0/20` (delete the existing address range, and click on **Add IPv4 address space**) |
+    | Subnet name | `subnet0` (click on **+ Add a subnet**, then **Add**)|
 
-1. In the **Networking** tab, click the **Edit network interface** icon to the right of the network interface entry.
+    ![lab07_edit_virtual_network.png](media/lab07_edit_virtual_network.png)
+   
+1. In the **Networking** tab, click the **Edit network interface** pen icon to the right of the network interface entry.
 
 1. For **NIC network security group** section, select **Advanced** and then click **Create new** under the **Configure network security group** drop-down list.
 
