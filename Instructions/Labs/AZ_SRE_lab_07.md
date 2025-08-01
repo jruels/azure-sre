@@ -60,7 +60,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
     > **Notes:** For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
-    ![Screenshot of the create vmss page. ](media/az104-lab08-create-vmss.png)
+    ![lab07_create_vmss.png](media/lab07_create_vmss.png)
 
 1. On the **Spot** tab, accept the defaults and select **Next : Disks >**.
 
