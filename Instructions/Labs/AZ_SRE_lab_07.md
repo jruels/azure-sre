@@ -53,7 +53,6 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Security type | **Standard** |
     | Scaling options | **Review and take the defaults**. We will change this in the next task. |
     | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
-    | Run with Azure Spot discount | **Unchecked** |
     | Size | click on the link "See all sizes", then select **Standard B1s** |
     | Username | `localadmin` |
     | Password | **Provide a secure password**  |
