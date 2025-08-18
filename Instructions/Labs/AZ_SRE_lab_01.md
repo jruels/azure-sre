@@ -126,8 +126,6 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
     >**Note**: Choose another size if **B2s** is not available. Resizing is also known as vertical scaling, up or down.
 
-    ![Screenshot of the resize the virtual machine.](media/az104-lab08-resize-vm.png)
-
 1. In the **Settings** area, select **Disks**.
 
 1. Under **Data disks** select **+ Create and attach a new disk**. Configure the settings (leave other settings at their default values).
