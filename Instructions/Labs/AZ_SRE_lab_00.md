@@ -24,9 +24,15 @@ In this lab, you will connect for the first time to Azure platform and to Azure 
    
     ![lab00_Azure_select_account.png](media/lab00_Azure_select_account.png)
 
-1. Click **Skip setup**.
+1. Follow the instructions to **download the Microsoft Authenticator app on your personal phone**. Then click **Next** to setup the two-factor athentication (2FA).
    
-    ![lab00_skip_setup.png](media/lab00_skip_setup.png)
+    ![lab00_skip_setup.png](media/Lab00_authenticator_setup.png)
+
+1. Follow the instructions to add an Account and approve notifications, until you finish the setup with this screen.
+   
+    ![lab00_skip_setup.png](media/Lab00_authenticator_setup_success.png)
+
+1. Click ...
 
 1. On the "Stay signed in?" page, tick "Don't show this again" then click **Yes**
 
@@ -51,10 +57,6 @@ In this lab, you will connect for the first time to Azure platform and to Azure 
    Password: ***
 
 1. Click **Next**.
-
-1. Click **Skip setup**.
-   
-    ![lab00_skip_setup.png](media/lab00_skip_setup.png)
 
 1. On the "Stay signed in?" page, tick "Don't show this again" then click **Yes**
 
