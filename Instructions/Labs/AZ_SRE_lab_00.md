@@ -39,7 +39,7 @@ In this lab, you will connect for the first time to Azure platform and to Azure 
     ![Lab00_authenticator_approve.png](media/Lab00_authenticator_approve.png)
 
 
-    ![Lab00_authenticator_approve_phone.pngg](media/Lab00_authenticator_approve_phone.png)
+    ![Lab00_authenticator_approve_phone.pngg](media/Lab00_authenticator_approve_phone3.png)
 
    
   > **Note**: You have now access to your resource groups in the Azure cloud platform.
