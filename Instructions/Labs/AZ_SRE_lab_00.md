@@ -26,17 +26,22 @@ In this lab, you will connect for the first time to Azure platform and to Azure 
 
 1. Follow the instructions to **download the Microsoft Authenticator app on your personal phone**. Then click **Next** to setup the two-factor athentication (2FA).
    
-    ![lab00_skip_setup.png](media/Lab00_authenticator_setup.png)
+    ![Lab00_authenticator_setup.png](media/Lab00_authenticator_setup.png)
 
 1. Follow the instructions to add an Account and approve notifications, until you finish the setup with this screen.
    
-    ![lab00_skip_setup.png](media/Lab00_authenticator_setup_success.png)
-
-1. Click ...
+    ![Lab00_authenticator_setup_success.png](media/Lab00_authenticator_setup_success.png)
 
 1. On the "Stay signed in?" page, tick "Don't show this again" then click **Yes**
 
+1. Now you need to approve the sign in request on your phone, enter the matching number is prompted in the authenticator app
+   
+    ![Lab00_authenticator_approve.png](media/Lab00_authenticator_approve.png)
 
+
+    ![Lab00_authenticator_approve_phone.pngg](media/Lab00_authenticator_approve_phone.png)
+
+   
   > **Note**: You have now access to your resource groups in the Azure cloud platform.
 
 ![lab00_welcome_azure.png](media/lab00_welcome_azure.png)
