@@ -166,6 +166,7 @@ Sign in to your Windows 11 virtual machine (VM).
    ```
 1. Push the code to your repository
    ```
+   git pull
    git add --all
    git commit -m "delivering two new endpoints"
    git push
