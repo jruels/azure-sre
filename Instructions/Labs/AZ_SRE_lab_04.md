@@ -116,7 +116,7 @@ Sign in to your Windows 11 virtual machine (VM).
 1. Go to Settings > Configuration, and remove the startup command
     > **Note**: Deploying with Azure DevOps will enable a better startup component
 
-1. Go to the Deployment Center, Settings and click Disconnect. Refer to screenshots below:
+1. Go to the Deployment Center, Settings and click Disconnect. Make sure to Delete Workflow File at this step. Refer to screenshots below:
 
 ![settings](./media/deploy_settings.png)
 
