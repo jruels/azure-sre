@@ -140,8 +140,23 @@ Sign in to your Windows 11 virtual machine (VM).
 
 1. Navigate to Azure, In the top search bar, type "Log Analytics workspaces" and open it.
 1. Click on the Log Analytics Workspace you're using **log-analytics-workspace**
-1. Select Settings > Agents, then expand "Log Analytics agent instructions"
-1. Copy and save in a note the values of "Workspace ID" and "Primary key"
+1. Select Settings > Properties, then copy the worskpace ID, we will use it later 
+1. We will now retieve our log analytics shared key, to do so, we will use azure CLI
+1. Go to your visual studio terminal, run the az login command
+1. Then run the command below :
+```
+az monitor log-analytics workspace get-shared-keys \
+  --resource-group ReplaceByYourRessourceGroup \
+  --workspace-name log-analytics-workspace-solution
+```
+1. This will return two keys as in the example below :
+```
+{
+  "primarySharedKey": "4DlDW6N5NLJvQEn2523432423425256134342432423432423423432WA==",
+  "secondarySharedKey": "WNQGbNgADufjLP77e3423423432432423423423424234242342342342="
+}
+```
+1. Copy and save the primarySharedKey value, we will use it in the next steps
    > **Note**: We will use these credentials to push metrics data to Azure Log Analytics from outside Azure.
 
 1. Navigate to **https://dev.azure.com/opscosolutions** and select your project Training-Student-0xx-OC0xx
