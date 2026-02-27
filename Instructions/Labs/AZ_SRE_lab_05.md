@@ -255,3 +255,17 @@ Congratulations on completing the lab. Here are the key takeaways from this lab.
 + High CPU or memory usage can be simulated to reproduce and diagnose production-like issues.
 + Visual workbooks help create structured dashboards for faster issue investigation.
 + Structured logging and KQL queries allow proactive alerting and informed debugging.
+
+## Extras
+
+Here is an example of an SLI for Availability
+```
+let totalRequests = AppServiceHTTPLogs
+    | summarize TotalCount = count();
+let error503s = AppServiceHTTPLogs
+    | where ScStatus == 503
+    | summarize Error503Count = count();
+totalRequests
+| extend Error503Count = toscalar(error503s)
+| project AvailabilitySLI = 1 - (Error503Count * 1.0 / TotalCount)
+```
