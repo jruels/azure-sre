@@ -1,4 +1,3 @@
-# Cohort C 
 | Name | Username | Virtual Machine Password | Student Email | Email Password | Virtual Machine Portal |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Zareen Ali | WINSRE25-01 | TEKwinSRE25! | student001_OC016@opscosolutions.onmicrosoft.com | SREWelcome2026! | [Ablaze Portal](https://my.ablazedesktop.com) |
