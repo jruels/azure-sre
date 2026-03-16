@@ -57,7 +57,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Virtual machine names | `lab01-vm1` and `lab01-vm2` (After selecting both availability zones, select **Edit names** under the VM name field.) |
     | Region | **East US** |
     | Availability options | **Availability zone** |
-    | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets) |
+    | Availability zone | **Zone 1, 3** (read the note about using virtual machine scale sets) |
     | Security type | **Standard** |
     | Image | **Windows Server 2025 Datacenter - x64 Gen2** |
     | Azure Spot instance | **unchecked** |
