@@ -168,6 +168,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
     >**Note:** You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
+1. Delete all resources within the **Lab01** resource group.
 
 ## Task 3: Create a virtual machine using the CLI 
 
