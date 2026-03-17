@@ -192,15 +192,15 @@ git clone https://github.com/jruels/azure-sre
 
 #### Task 6: Configure the web app
 
-1. On the **App Service** blade, in the **Settings** section, select the **Configuration** link. **Leave Preview mode**.
+1. On the **App Service** blade, in the **Settings** section, select the **Configuration** link.
 
-1. In the **Startup Command** field, enter the following command, then select **Save** and **Continue**.
+1. In the **Startup Command** field under **stack settings** tab, enter the following command, then select **Save** and **Continue**.
    ```
    python3.13 -m pip install -r requirements.txt && gunicorn --bind=0.0.0.0 --timeout 600 application:app
    ```
    > **Note**: This makes sure the requirements are installed and the application runs on startup.
 
-1. Under "Platform settings", select "On" for the option **SCM Basic Auth Publishing Credentials**
+1. Under "General settings", select "On" for the option **SCM Basic Auth Publishing Credentials**
 
 1. In the **Settings** section, select the **Environment variables** link.
 
