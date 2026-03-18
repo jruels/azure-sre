@@ -147,7 +147,7 @@ Sign in to your Windows 11 virtual machine (VM).
 ```
 az monitor log-analytics workspace get-shared-keys \
   --resource-group ReplaceByYourRessourceGroup \
-  --workspace-name log-analytics-workspace-solution
+  --workspace-name log-analytics-workspace
 ```
 1. This will return two keys as in the example below :
 ```
